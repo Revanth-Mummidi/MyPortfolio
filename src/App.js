@@ -6,16 +6,18 @@ import Experience from './Components/Experience'
 import Projects from './Components/Projects'
 import Achievements from './Components/Achievements'
 import Contact from './Components/Contact'
+import Profiles from './Components/Profiles'
 
 function App() {
   return (
-    <div className='overflow-auto' >
+    <div className='overflow-auto bg-slate-700' >
       <Navbar/>
       <HomePage />
       <Skills/>
       <Experience/>
       <Projects/>
       <Achievements/>
+      <Profiles/>
       <Contact/>
     </div>
   )

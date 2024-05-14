@@ -12,7 +12,7 @@ function HomePage() {
   
 
   return (
-    <section className='bg-slate-700 mt-[60px] h-[100vh] w-[100vw] text-white justify-center items-center py-5' id='homepage'>
+    <section className='bg-slate-700 mt-[60px] h-[70vh] w-[100vw] text-white justify-center items-center py-5' id='homepage'>
             <div className='grid  grid-cols-1 md:grid-cols-2 h-full w-full '>
                 <div className='flex flex-1 flex-row items-center justify-center'>
                     <div>
@@ -47,7 +47,7 @@ function LeftContent(){
        <img
          src={ProfilePic}
          className={
-           "bg-gradient-to-bl flip-card-front shadow-2xl shadow-black  from-[#051A91] via-[#061C93] via-[#2284F1] to-[#1F80EB] rounded-full w-[200px] md:w-[300px] aspect-square mx-auto  justify-center items-center transition-transform delay-700"
+           "bg-gradient-to-bl flip-card-front shadow-2xl shadow-black  from-[#051A91] via-[#061C93] via-[#2284F1] to-[#1F80EB] rounded-full w-[300px] md:w-[300px] aspect-square mx-auto  justify-center items-center transition-transform delay-700"
          }
        >
     
@@ -56,7 +56,7 @@ function LeftContent(){
        <div
          className={
           
-             "bg-gradient-to-bl flip-card-back  shadow-2xl shadow-black from-[#071844] via-[#071844] via-[#2D87B6] to-[#2D87B6] p-10 rounded-full w-[200px] md:w-[300px] aspect-square mx-auto  justify-center items-center transition-transform delay-700"
+             " flip-card-back  shadow-2xl shadow-black bg-gradient-to-bl from-[#071844] via-[#071844] via-[#2D87B6] to-[#2D87B6] p-10 rounded-full w-[300px] md:w-[300px] aspect-square mx-auto  justify-center items-center transition-transform delay-700"
          }
        >
          <div className="w-full h-full relative flex flex-col ">

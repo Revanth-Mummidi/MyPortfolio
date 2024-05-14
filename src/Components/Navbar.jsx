@@ -6,11 +6,11 @@ function Navbar() {
   const [sideNav, setSideNav] = useState(false);
 
   const options = [
-    { name: "About Me", path: "#homepage" },
     { name: "Skills", path: "#skills" },
     { name: "Experience", path: "#experience" },
     { name: "Projects", path: "#projects" },
     { name: "Acheivements", path: "#achievements" },
+    { name: "Profiles ", path: "#profiles" },
     { name: "Contact", path: "#contact" },
   ];
   return (

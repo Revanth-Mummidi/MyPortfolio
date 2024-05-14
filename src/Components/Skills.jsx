@@ -15,13 +15,13 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="min-h-[100vh] w-[100vw] bg-slate-700 flex flex-col items-center justify-center p-10"
+      className=" w-[100vw] bg-slate-700 flex flex-col items-center justify-center p-10"
     >
-      <p className="text-[45px] my-10 md:text-[50px] font-bold text-white">
+      <p className="text-[35px] my-10 md:text-[40px] font-bold text-white">
         Skills
       </p>
           
-      <div className="border-gray-300 bg-gray-900 shadow-black shadow-2xl border border-l-2 rounded-lg   items-center justify-center flex">
+      <div className="border-gray-300 w-[90vw] bg-gray-900 shadow-black shadow-2xl border border-l-2 rounded-lg   items-center justify-center flex">
         {/* <LeftContent/> */}
         <div className="sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-20 py-10 gap-x-6 gap-y-2 items-center justify-center">
         {skills.map((data, index) => {

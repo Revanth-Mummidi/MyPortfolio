@@ -31,13 +31,13 @@ function Experience() {
   return (
     <section
       id="experience"
-      className="min-h-[100vh] w-[100vw] bg-slate-700 flex flex-col items-center justify-center p-10"
+      className=" w-[100vw] bg-slate-700 flex flex-col items-center justify-center p-10"
     >
       <p className="text-[35px] my-10 md:text-[40px] font-bold text-white ">
         Experience
       </p>
-      <div className="border-gray-300 bg-gray-900 shadow-black shadow-2xl border border-l-2 rounded-lg   items-center justify-center flex">
-        <div className="sm:grid sm:grid-cols-1 md:grid-cols-1 xl:grid-cols-2 px-5 md:px-10 py-10 gap-x-6 gap-y-2 items-center justify-center">
+      <div className="border-gray-300 w-[90vw] bg-gray-900 shadow-black shadow-2xl border border-l-2 rounded-lg   items-center justify-center flex">
+        <div className="sm:grid sm:grid-cols-1 md:grid-cols-1 xl:grid-cols-2 px-5 md:px-10 py-10 gap-x-12 gap-y-2 items-center justify-center">
           {
             ExperienceData.map((data,index)=>{
               return(
@@ -63,10 +63,10 @@ const Card = ({data}) => {
           !rotate ? "flip-card-inner flip-card-rotate" : "flip-card-inner"
         }
       >
-        <div className="lg:w-[520px] xl:w-[570px] sm:w-[400px] w-[300px]  shadow-2xl shadow-black flip-card-front aspect-video right-0 border-slate-700  border bg-slate-800 rounded-xl ">
+        <div className="lg:w-[520px] xl:w-[500px]  sm:w-[400px] w-[300px]  shadow-2xl shadow-black flip-card-front aspect-video right-0 border-slate-700  border bg-gradient-to-l from-slate-700 via-slate-600 via-slate-600 to-slate-900 rounded-xl ">
           <FrontCard data={data} />
         </div>
-        <div className="lg:w-[520px] xl:w-[570px]  sm:w-[400px] w-[300px] shadow-2xl shadow-black flip-card-back aspect-video right-0 border-slate-800 border  bg-slate-700 rounded-xl ">
+        <div className="lg:w-[520px] xl:w-[500px]  sm:w-[400px] w-[300px] shadow-2xl shadow-black flip-card-back aspect-video right-0 border-slate-800 border  bg-slate-700 rounded-xl ">
           <BackCard data={data} />
         </div>
       </div>
@@ -114,7 +114,7 @@ const BackCard = ({data}) => {
   return (
     <div className="p-4 w-full h-full overflow-y-auto ">
     <div className="w-full h-full flex flex-col">
-      <div className="flex flex-row justify-between items-center">
+      <div className="flex flex-row justify-center items-center">
         
         <p className="text-white font-semibold text-lg md:text-2xl">Description</p>
       </div>
