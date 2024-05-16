@@ -1,6 +1,7 @@
 
 import EHLogo from "../Assets/1630615940866.jpeg"
 import HyggexLogo from "../Assets/hyggexworld_logo.jpeg"
+import HackerEarth from "../Assets/HE_identity.png";
 import React, { useState } from "react";
 
 function Experience() {
@@ -14,7 +15,7 @@ function Experience() {
      location:"Remote",
      started:"Sep 2023",
      ended:"Present",
-     description:( <p>In this internship I am currently working as a front end developer.I have completed Self Assessment Screens and integrated with <b> Api</b> .<br/> I also learn't about <b>Redux</b> and used Redux in the website.</p>),
+     description:( <p>In this internship I am currently working as a front end developer.I have completed Self Assessment Screens and integrated with <b> Api.</b> <br/> I also used <b>Redux</b> in the website. I made responsive designs using <b>Tailwind CSS</b></p>),
   },
   {
     name:"Evaluate Health",
@@ -27,7 +28,19 @@ function Experience() {
     description:( <p>In this internship I worked as React Native developer.I have completed Calendar and Profile modules with complete functionalities and integrated with <b>Restful Api</b> .<br/> I also learn't about <b>Redux</b> and used Redux throught the app.<br/>I have also implemented <b>Pagination</b> to with stand large amount of data in Client side </p>),
  },
 ]
-
+const VolunteerExperienceData=[
+  {
+     name:"Hacker Earth Lead",
+     path:HackerEarth,
+     role:"HECA",
+     duration:"-",
+     location:"VIIT",
+     started:"Sep 2023",
+     ended:"Present",
+     description:( <p>I worked as Hacker Earth Lead in our College.In which my responsbility is to improve coding culture in our college.<br/>As a part of it I worked as a problem setter for weekly coding contest with average participation of <b>500+</b> students. <br></br>I also conducted a national wide coding contest Code-Sprint as a part of Vista Technical Event in our College with nearly <b>400</b> participants. We also conducted seminars to junios on Competitve Coding.</p>),
+  },
+ 
+]
   return (
     <section
       id="experience"
@@ -36,10 +49,24 @@ function Experience() {
       <p className="text-[35px] my-10 md:text-[40px] font-bold text-white ">
         Experience
       </p>
-      <div className="border-gray-300 w-[90vw] bg-gray-900 shadow-black shadow-2xl border border-l-2 rounded-lg   items-center justify-center flex">
-        <div className="sm:grid sm:grid-cols-1 md:grid-cols-1 xl:grid-cols-2 px-5 md:px-10 py-10 gap-x-12 gap-y-2 items-center justify-center">
+      <div className="border-gray-300 w-[90vw] bg-gray-900 shadow-black shadow-2xl border border-l-2 rounded-lg   items-center justify-center flex flex-col">
+        <p className="text-white text-3xl mt-10 font-semibold">Intern Experience</p>
+        <div className="sm:grid sm:grid-cols-1 md:grid-cols-1 xl:grid-cols-2  px-5 md:px-10 py-10 gap-x-12 gap-y-2 items-center justify-center">
           {
             ExperienceData.map((data,index)=>{
+              return(
+                <Card key={index} data={data}/>
+              )
+            })
+          }          
+        </div>
+       <div className="flex flex-row w-full border border-white">
+
+       </div>
+        <p className="text-white text-3xl mt-10 font-semibold">Volunteer Experience</p>
+        <div className="flex flex-row items-center justify-center">
+          {
+            VolunteerExperienceData.map((data,index)=>{
               return(
                 <Card key={index} data={data}/>
               )
@@ -63,10 +90,10 @@ const Card = ({data}) => {
           !rotate ? "flip-card-inner flip-card-rotate" : "flip-card-inner"
         }
       >
-        <div className="lg:w-[520px] xl:w-[500px]  sm:w-[400px] w-[300px]  shadow-2xl shadow-black flip-card-front aspect-video right-0 border-slate-700  border bg-gradient-to-l from-slate-700 via-slate-600 via-slate-600 to-slate-900 rounded-xl ">
+        <div className="lg:w-[520px] xl:w-[500px]  sm:w-[400px]  w-[280px] shadow-2xl shadow-black flip-card-front aspect-video right-0 border-slate-700  border bg-gradient-to-l from-slate-700 via-slate-600 via-slate-600 to-slate-900 rounded-xl ">
           <FrontCard data={data} />
         </div>
-        <div className="lg:w-[520px] xl:w-[500px]  sm:w-[400px] w-[300px] shadow-2xl shadow-black flip-card-back aspect-video right-0 border-slate-800 border  bg-slate-700 rounded-xl ">
+        <div className="lg:w-[520px] xl:w-[500px]  sm:w-[400px] w-[280px] shadow-2xl shadow-black flip-card-back aspect-video right-0 border-slate-800 border  bg-slate-700 rounded-xl ">
           <BackCard data={data} />
         </div>
       </div>
@@ -76,7 +103,7 @@ const Card = ({data}) => {
 
 const FrontCard = ({data}) => {
   return (
-    <div className="p-4 w-full h-full overflow-y-auto">
+    <div className="p-4 w-full h-full overflow-y-auto no-scrollbar">
       <div className="w-full h-full flex flex-col">
         <div className="flex flex-row justify-between items-center">
           {/* <div className="w-[50px] md:w-[80px] aspect-video bg-blue-900 rounded-lg"></div> */}
@@ -112,7 +139,7 @@ const FrontCard = ({data}) => {
 };
 const BackCard = ({data}) => {
   return (
-    <div className="p-4 w-full h-full overflow-y-auto ">
+    <div className="p-4 w-full h-full overflow-y-auto no-scrollbar flex ">
     <div className="w-full h-full flex flex-col">
       <div className="flex flex-row justify-center items-center">
         

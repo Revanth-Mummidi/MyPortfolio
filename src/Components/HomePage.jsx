@@ -12,7 +12,7 @@ function HomePage() {
   
 
   return (
-    <section className='bg-slate-700 mt-[60px] h-[70vh] w-[100vw] text-white justify-center items-center py-5' id='homepage'>
+    <section className='bg-slate-700 mt-[60px] h-[100vh] w-[100vw] text-white justify-center items-center py-5 mb-10' id='homepage'>
             <div className='grid  grid-cols-1 md:grid-cols-2 h-full w-full '>
                 <div className='flex flex-1 flex-row items-center justify-center'>
                     <div>
@@ -26,7 +26,9 @@ function HomePage() {
                         <p className='font-sans font-semibold text-[40px]  lg:text-[50px] text-orange-300 '>Revanth Mummidi</p>
                         <p className='font-sans font-semibold mt-3 text-[20px] lg:text-[30px] '>{Abilities[idx]}</p>
                         <div className='flex flex-row mt-5 gap-5 justify-center md:justify-start items-center  '>
-                            <CustomButton content={"Hire Me"}  />
+                           <a href={"mailto:mummidirevanth@gmail.com"}>
+                             <CustomButton content={"Hire Me"}  />
+                            </a>
                             <CustomButton content={"Resume"}/>
                         </div>
                     </div>
@@ -36,9 +38,9 @@ function HomePage() {
   )
 }
 function LeftContent(){
-    const [rotate,setRotate]=useState(false);
+    const [rotate,setRotate]=useState(true);
     return(
-        <div  className=" self-center  flip-card hover:animate-pulse ">
+        <div  className=" self-center  flip-card hover:animate-pulse mb-10">
 
         <div onClick={()=>{
        setRotate(!rotate);
@@ -47,7 +49,7 @@ function LeftContent(){
        <img
          src={ProfilePic}
          className={
-           "bg-gradient-to-bl flip-card-front shadow-2xl shadow-black  from-[#051A91] via-[#061C93] via-[#2284F1] to-[#1F80EB] rounded-full w-[300px] md:w-[300px] aspect-square mx-auto  justify-center items-center transition-transform delay-700"
+           "bg-gradient-to-bl flip-card-front shadow-2xl shadow-black   rounded-full w-[300px] md:w-[400px] aspect-square mx-auto  justify-center items-center transition-transform delay-700"
          }
        >
     
@@ -56,14 +58,17 @@ function LeftContent(){
        <div
          className={
           
-             " flip-card-back  shadow-2xl shadow-black bg-gradient-to-bl from-[#071844] via-[#071844] via-[#2D87B6] to-[#2D87B6] p-10 rounded-full w-[300px] md:w-[300px] aspect-square mx-auto  justify-center items-center transition-transform delay-700"
+             " flip-card-back  shadow-2xl shadow-black  bg-gradient-to-bl from-slate-700 via-slate-600 via-slate-600 to-slate-900  p-10 rounded-full w-[300px] md:w-[400px] aspect-square mx-auto  justify-center items-center transition-transform delay-700"
          }
        >
-         <div className="w-full h-full relative flex flex-col ">
+         <div className="w-full h-full  flex flex-col ">
 
-          
-           <p className="text-white font-bold text-3xl my-auto ">
-          
+          <p className='underline underline-offset-4 font-bold text-xl text-white text-center'>About me</p>
+           <p className="text-white font-semibold   mt-4 overflow-y-auto no-scrollbar p-5 text-wrap">
+            I'm a passionate full stack developer and also competitive programmer.
+            I'm currently pursing B.Tech 3rd year at Vignan's Institute of Information technology.
+            I have strong foundation in web development and also in Frontend Android Development.
+            I'm eager to learn and work on projects.
            </p>
           
          </div>
@@ -75,7 +80,7 @@ function LeftContent(){
 }
 function CustomButton({content}){
     return(
-        <div className='cursor-pointer bg-violet-800 px-8 py-3 rounded-lg shadow-2xl shadow-black hover:animate-bounce'>
+        <div className='cursor-pointer hover:opacity-[0.5] bg-gradient-to-l from-slate-700 via-slate-600 via-slate-600 to-slate-900 px-8 py-3 rounded-lg shadow-2xl shadow-black '>
             <p>{content}</p>
         </div>
     )

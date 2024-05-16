@@ -10,7 +10,7 @@ import Profiles from './Components/Profiles'
 
 function App() {
   return (
-    <div className='overflow-auto bg-slate-700' >
+    <div className='overflow-y-auto no-scrollbar bg-slate-700' >
       <Navbar/>
       <HomePage />
       <Skills/>

@@ -9,17 +9,26 @@ function Projects() {
   {
     name:"Fit Foods",
     tech:"React JS , Tailwind CSS",
-    description:(<p>h</p>)
+    github:"",
+    preview:"",
+    description:(<p>It is website which helps users to give personalized food choices according to their health issues and allergies.
+      It helps users to identify the foods which are suitable for their allergies or health issues and which are not.
+      Users can store their health reports as well.
+    </p>)
   },
   {
     name:"Craft Sale",
-    tech:"React JS , Tailwind CSS",
-    description:(<p>g</p>)
+    tech:"React JS , Tailwind CSS , Mongo DB , NodeJs , ExpressJs",
+    github:"",
+    preview:"",
+    description:(<p>It is an Ecommerce Website in which user can buy or sell the hand made crafts.I followed micro service architecture for the backend and in front end I used React Js along with Tailwind CSS.</p>)
   },
   {
     name:"Insta Clone",
     tech:"React Native",
-    description:(<p>f</p>)
+    github:"",
+    preview:"",
+    description:(<p>It is a replicate of Instagram Social Media App. I built Instagram Clone using React Native in which I made Profile and Home Screens which contains Posts,Stories and Highlights</p>)
   }
 ]
 
@@ -58,11 +67,11 @@ const Card = ({data}) => {
           !rotate ? "flip-card-inner flip-card-rotate" : "flip-card-inner"
         }
       >
-        <div  className="lg:w-[520px] flex flex-row justify-center items-center xl:w-[500px] sm:w-[400px] w-[300px]  shadow-2xl shadow-black flip-card-front aspect-video right-0 border-slate-700 bg-gradient-to-l from-slate-700 via-slate-600 via-slate-600 to-slate-900   border  rounded-xl " >
+        <div  className="lg:w-[520px] flex flex-row justify-center items-center xl:w-[500px] sm:w-[400px] w-[280px]  shadow-2xl shadow-black flip-card-front aspect-video right-0 border-slate-700 bg-gradient-to-l from-slate-700 via-slate-600 via-slate-600 to-slate-900   border  rounded-xl " >
           {/* <FrontCard data={data} /> */}
           <p className="text-[40px] lg:text-[60px] font-bold text-white">{data.name}</p>
         </div>
-        <div className="lg:w-[520px] xl:w-[500px]  sm:w-[400px] w-[300px] shadow-2xl shadow-black blur-0 flip-card-back aspect-video right-0 border-slate-800 border  bg-slate-700 rounded-xl ">
+        <div className="lg:w-[520px] xl:w-[500px]  sm:w-[400px] w-[280px] shadow-2xl shadow-black blur-0 flip-card-back aspect-video right-0 border-slate-800 border  bg-slate-700 rounded-xl ">
           <BackCard data={data} />
         </div>
       </div>
@@ -73,7 +82,7 @@ const Card = ({data}) => {
 
 const BackCard = ({data}) => {
   return (
-    <div className="p-4 w-full h-full overflow-y-auto ">
+    <div className="p-4 w-full h-full overflow-y-auto no-scrollbar ">
     <div className="w-full h-full flex flex-col">
       <div className="flex flex-row justify-center items-center">
         
@@ -82,13 +91,22 @@ const BackCard = ({data}) => {
       <hr className="my-3"></hr>
       <div className="text-white flex flex-row  items-center gap-5">
         <p className="font-semibold text-white text-sm md:text-lg">Frameworks :</p>
-        <p className="text-sm md:text-lg">{data.tech}</p>
+        <p className="text-sm md:text-lg flex flex-1 flex-row justify-end">{data.tech}</p>
         </div>
+        <div className="text-white flex flex-row  items-center gap-5">
+        <p className="font-semibold text-white text-sm md:text-lg">GitHub :</p>
+        <a href={data.github} className="text-sm md:text-lg flex flex-1 flex-row justify-end underline underline-offset-2">View</a>
+        </div>
+        <div className="text-white flex flex-row  items-center gap-5">
+        <p className="font-semibold text-white text-sm md:text-lg">Preview :</p>
+        <a href={data.preview} className="text-sm md:text-lg flex flex-1 flex-row justify-end underline underline-offset-2">View</a>
+        </div>
+       
         <div className="text-white flex flex-row  items-center gap-6">
         <p className="font-semibold text-white text-sm md:text-lg text-start self-start ">Description : </p>
         
       <div className="flex flex-row text-white font-normal justify-start flex-1 pb-2 ">
-         <p className="text-sm md:text-lg">
+         <p className="text-sm md:text-lg flex flex-1 flex-row justify-end">
           {data.description}
           </p>
       </div>

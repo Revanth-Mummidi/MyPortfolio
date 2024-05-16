@@ -15,7 +15,7 @@ function Skills() {
   return (
     <section
       id="skills"
-      className=" w-[100vw] bg-slate-700 flex flex-col items-center justify-center p-10"
+      className=" w-[100vw] md:mt-0  bg-slate-700 flex flex-col items-center justify-center p-10"
     >
       <p className="text-[35px] my-10 md:text-[40px] font-bold text-white">
         Skills
