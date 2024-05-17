@@ -21,8 +21,8 @@ function Navbar() {
       <div className="hidden lg:flex flex-row flex-1 items-center justify-end ">
         {options.map((item, index) => {
           return (
-            <div key={index} className="mx-10">
-              <a href={item.path} className="text-white">{item.name}</a>
+            <div key={index} className="mx-10 w-[50px] items-center flex justify-center">
+              <a href={item.path} className="text-white font-semibold hover:underline hover:underline-offset-4  hover:text-slate-300 hover:text-lg">{item.name}</a>
             </div>
           );
         })}
@@ -46,7 +46,7 @@ function Navbar() {
 function SideNavBar({ options , setSideNav}) {
   return (
     <div className="absolute lg:hidden right-0 top-0 ">
-      <div className="relative flex flex-col  bg-slate-800 h-screen   items-center  w-full">
+      <div className="relative flex flex-col  bg-slate-800 h-screen   items-center ">
         <div className="flex-row justify-center items-center py-5 px-4   bg-slate-500  flex w-full">
           <h1 className="md:text-2xl text-lg text-white mr-7  font-bold">Revanth</h1>
           <IoClose className="text-white md:text-2xl text-lg font-bold" onClick={()=>{setSideNav(false)}} />
@@ -54,8 +54,8 @@ function SideNavBar({ options , setSideNav}) {
         <div className="flex flex-col py-7 flex-1 items-start opacity-[0.9]  ">
           {options.map((item, index) => {
             return (
-              <div key={index} className="my-5 ">
-                <a href={item.path} className="text-white text-start text-sm md:text-base">{item.name}</a>
+              <div key={index} className="my-5 h-[50px] items-center flex justify-center">
+                <a href={item.path} className="text-white text-start text-sm md:text-base hover:underline hover:underline-offset-4  hover:text-slate-300 ">{item.name}</a>
               </div>
             );
           })}

@@ -11,24 +11,21 @@ function Projects() {
     tech:"React JS , Tailwind CSS",
     github:"",
     preview:"",
-    description:(<p>It is website which helps users to give personalized food choices according to their health issues and allergies.
-      It helps users to identify the foods which are suitable for their allergies or health issues and which are not.
-      Users can store their health reports as well.
-    </p>)
+    description:"It is website which helps users to give personalized food choices according to their health issues and allergies.It helps users to identify the foods which are suitable for their allergies or health issues and which are not.Users can store their health reports as well."
   },
   {
     name:"Craft Sale",
     tech:"React JS , Tailwind CSS , Mongo DB , NodeJs , ExpressJs",
     github:"",
     preview:"",
-    description:(<p>It is an Ecommerce Website in which user can buy or sell the hand made crafts.I followed micro service architecture for the backend and in front end I used React Js along with Tailwind CSS.</p>)
+    description:"It is an Ecommerce Website in which user can buy or sell the hand made crafts.I followed micro service architecture for the backend and in front end I used React Js along with Tailwind CSS."
   },
   {
     name:"Insta Clone",
     tech:"React Native",
     github:"",
     preview:"",
-    description:(<p>It is a replicate of Instagram Social Media App. I built Instagram Clone using React Native in which I made Profile and Home Screens which contains Posts,Stories and Highlights</p>)
+    description:"It is a replicate of Instagram Social Media App. I built Instagram Clone using React Native in which I made Profile and Home Screens which contains Posts,Stories and Highlights"
   }
 ]
 
