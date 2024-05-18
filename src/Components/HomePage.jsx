@@ -1,5 +1,6 @@
 import React, { useDebugValue, useEffect, useState } from 'react'
 import ProfilePic from "../Assets/ProfilePic-photoaidcom-cropped.jpg"
+import { Fade } from 'react-reveal';
 
 function HomePage() {
   const Abilities=["Full Stack Web Developer","React Native Developer","Competitive Programmer"];
@@ -13,6 +14,9 @@ function HomePage() {
 
   return (
     <section className='bg-slate-700 mt-[60px] h-[100vh] w-[100vw] text-white justify-center items-center py-5 mb-10' id='homepage'>
+         <Fade bottom duration="1500" distance="120px">
+
+    
             <div className='grid  grid-cols-1 md:grid-cols-2 h-full w-full '>
                 <div className='flex flex-1 flex-row items-center justify-center'>
                     <div>
@@ -34,6 +38,7 @@ function HomePage() {
                     </div>
                 </div>
             </div>
+            </Fade>
     </section>
   )
 }
@@ -81,7 +86,7 @@ function LeftContent(){
 function CustomButton({content}){
     return(
         <div className='cursor-pointer hover:opacity-[0.5] bg-gradient-to-l from-slate-700 via-slate-600 via-slate-600 to-slate-900 px-8 py-3 rounded-lg shadow-2xl shadow-black '>
-            <p>{content}</p>
+            <p className='font-semibold text-lg'>{content}</p>
         </div>
     )
 }

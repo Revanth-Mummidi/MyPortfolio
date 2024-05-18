@@ -57,7 +57,7 @@ function SkillCircle({ openTxt, closedTxt }) {
       >
         <div
           className={
-            "bg-gradient-to-bl flip-card-front mt-0 shadow-2xl shadow-black from-[#021f66] via-[#214dc7]  to-[#c142da] p-4 rounded-full w-[100px] lg:w-[140px] aspect-square my-5 mx-5   justify-center items-center transition-transform delay-700"
+            "bg-gradient-to-bl flip-card-front mt-0 shadow-2xl shadow-black  from-slate-700 via-slate-600 via-slate-600 to-slate-900 p-4 rounded-full w-[100px] lg:w-[140px] aspect-square my-5 mx-5   justify-center items-center transition-transform delay-700"
           }
         >
           <div className="w-full h-full relative flex flex-col items-center justify-center ">
@@ -68,7 +68,7 @@ function SkillCircle({ openTxt, closedTxt }) {
         </div>
         <div
           className={
-            "bg-gradient-to-bl flip-card-back  shadow-2xl shadow-black from-[#071844] via-[#071844] via-[#2D87B6] to-[#2D87B6] p-4 rounded-full w-[100px] lg:w-[140px] aspect-square my-5 mx-5   justify-center items-center transition-transform delay-700"
+            "bg-gradient-to-bl flip-card-back  shadow-2xl shadow-black  from-slate-300 via-slate-200 via-slate-500 to-slate-600 p-4 rounded-full w-[100px] lg:w-[140px] aspect-square my-5 mx-5   justify-center items-center transition-transform delay-700"
           }
         >
           <div className="w-full h-full relative flex flex-col items-center justify-center">
