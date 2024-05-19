@@ -1,7 +1,5 @@
 
-import EHLogo from "../Assets/1630615940866.jpeg"
-import HyggexLogo from "../Assets/hyggexworld_logo.jpeg"
-import React, { useState } from "react";
+import React from "react";
 
 function Achievements() {
  

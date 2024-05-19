@@ -3,6 +3,7 @@ import EHLogo from "../Assets/1630615940866.jpeg"
 import HyggexLogo from "../Assets/hyggexworld_logo.jpeg"
 import HackerEarth from "../Assets/HE_identity.png";
 import React, { useState } from "react";
+import { Fade } from "react-reveal";
 
 function Experience() {
  
@@ -74,6 +75,9 @@ const VolunteerExperienceData=[
           }          
         </div>
       </div>
+      <p className="text-[20px] md:text-[30px] font-semibold mt-10 text-white text-center">
+      Click on the card to check the description
+      </p>
     </section>
   );
 }
@@ -81,7 +85,8 @@ const VolunteerExperienceData=[
 const Card = ({data}) => {
   const [rotate, setRotate] = useState(true);
   return (
-    <div className="flip-card mx-auto my-8">
+    <div className="flip-card cursor-pointer mx-auto my-8">
+      <Fade left duration="1500">
       <div
         onClick={() => {
           setRotate(!rotate);
@@ -90,6 +95,7 @@ const Card = ({data}) => {
           !rotate ? "flip-card-inner flip-card-rotate" : "flip-card-inner"
         }
       >
+
         <div className="lg:w-[520px] xl:w-[500px]  sm:w-[400px]  w-[280px] shadow-2xl shadow-black flip-card-front aspect-video right-0 border-slate-700  border bg-gradient-to-l from-slate-700 via-slate-600 via-slate-600 to-slate-900 rounded-xl ">
           <FrontCard data={data} />
         </div>
@@ -97,14 +103,15 @@ const Card = ({data}) => {
           <BackCard data={data} />
         </div>
       </div>
+        </Fade>
     </div>
   );
 };
 
 const FrontCard = ({data}) => {
   return (
-    <div className="p-4 w-full h-full overflow-y-auto no-scrollbar">
-      <div className="w-full h-full flex flex-col">
+    <div className="p-4 cursor-pointer w-full h-[270px] md:h-full overflow-y-scroll no-scrollbar flex">
+      <div className="w-full h-full flex flex-col ">
         <div className="flex flex-row justify-between items-center">
           {/* <div className="w-[50px] md:w-[80px] aspect-video bg-blue-900 rounded-lg"></div> */}
           <img src={data.path} className="w-[50px] md:w-[80px]  rounded-lg object-cover object-center" ></img>
@@ -139,7 +146,7 @@ const FrontCard = ({data}) => {
 };
 const BackCard = ({data}) => {
   return (
-    <div className="p-4 w-full h-full overflow-y-auto no-scrollbar flex ">
+    <div className="p-4 cursor-pointer w-full h-[270px] md:h-full overflow-y-auto no-scrollbar flex ">
     <div className="w-full h-full flex flex-col">
       <div className="flex flex-row justify-center items-center">
         

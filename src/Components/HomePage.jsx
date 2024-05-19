@@ -1,6 +1,7 @@
-import React, { useDebugValue, useEffect, useState } from 'react'
+import React, {  useState } from 'react'
 import ProfilePic from "../Assets/ProfilePic-photoaidcom-cropped.jpg"
 import { Fade } from 'react-reveal';
+import Arrow from "../Assets/toppng.com-arrow-pointing-to-left-comments-curved-arrow-vector-980x858.png"
 
 function HomePage() {
   const Abilities=["Full Stack Web Developer","React Native Developer","Competitive Programmer"];
@@ -19,9 +20,16 @@ function HomePage() {
     
             <div className='grid  grid-cols-1 md:grid-cols-2 h-full w-full '>
                 <div className='flex flex-1 flex-row items-center justify-center'>
-                    <div>
+                    <div className='flex  relative flex-col gap-5'>
 
                     <LeftContent/>
+                    <div className='absolute -top-10 -right-28 lg:-right-28 '>
+                    <div className='flex flex-col gap-5 '>
+
+                    <p className='font-semibold text-2xl md:text-3xl text-center'>Click here</p> 
+                    <img src={Arrow} className='lg:w-16 w-14 aspect-video -rotate-12 mr-4 '></img>
+                    </div>
+                    </div>
                     </div>
                 </div>
                 <div className='flex flex-1 flex-col items-center justify-center  text-center md:text-start'>
@@ -33,7 +41,10 @@ function HomePage() {
                            <a href={"mailto:mummidirevanth@gmail.com"}>
                              <CustomButton content={"Hire Me"}  />
                             </a>
+                            <a href="https://drive.google.com/file/d/11EHZH1jkyQ8pb7w278LFrppHkgwJeqZD/view?usp=sharing">
+
                             <CustomButton content={"Resume"}/>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -45,7 +56,7 @@ function HomePage() {
 function LeftContent(){
     const [rotate,setRotate]=useState(true);
     return(
-        <div  className=" self-center  flip-card hover:animate-pulse mb-10">
+        <div  className=" self-center cursor-pointer flip-card hover:animate-pulse mb-10">
 
         <div onClick={()=>{
        setRotate(!rotate);

@@ -1,7 +1,6 @@
 
-import EHLogo from "../Assets/1630615940866.jpeg"
-import HyggexLogo from "../Assets/hyggexworld_logo.jpeg"
 import React, { useState } from "react";
+import { Fade } from "react-reveal";
 
 function Projects() {
  
@@ -9,21 +8,21 @@ function Projects() {
   {
     name:"Fit Foods",
     tech:"React JS , Tailwind CSS",
-    github:"",
-    preview:"",
+    github:"https://github.com/Revanth-Mummidi/Fit_Foods",
+    preview:"https://fit-foods.vercel.app/",
     description:"It is website which helps users to give personalized food choices according to their health issues and allergies.It helps users to identify the foods which are suitable for their allergies or health issues and which are not.Users can store their health reports as well."
   },
   {
     name:"Craft Sale",
     tech:"React JS , Tailwind CSS , Mongo DB , NodeJs , ExpressJs",
-    github:"",
+    github:"https://github.com/Revanth-Mummidi/client",
     preview:"",
     description:"It is an Ecommerce Website in which user can buy or sell the hand made crafts.I followed micro service architecture for the backend and in front end I used React Js along with Tailwind CSS."
   },
   {
     name:"Insta Clone",
     tech:"React Native",
-    github:"",
+    github:"https://github.com/Revanth-Mummidi/insta",
     preview:"",
     description:"It is a replicate of Instagram Social Media App. I built Instagram Clone using React Native in which I made Profile and Home Screens which contains Posts,Stories and Highlights"
   }
@@ -48,6 +47,9 @@ function Projects() {
           }          
         </div>
       </div>
+      <p className="text-[20px] md:text-[30px] font-semibold mt-10 text-white text-center">
+        Click on the card to check the description
+      </p>
     </section>
   );
 }
@@ -55,7 +57,9 @@ function Projects() {
 const Card = ({data}) => {
   const [rotate, setRotate] = useState(true);
   return (
-    <div className="flip-card mx-auto my-8">
+    <div className="flip-card cursor-pointer mx-auto my-8">
+      <Fade left duration="1500">
+
       <div
         onClick={() => {
           setRotate(!rotate);
@@ -63,7 +67,7 @@ const Card = ({data}) => {
         className={
           !rotate ? "flip-card-inner flip-card-rotate" : "flip-card-inner"
         }
-      >
+        >
         <div  className="lg:w-[520px] flex flex-row justify-center items-center xl:w-[500px] sm:w-[400px] w-[280px]  shadow-2xl shadow-black flip-card-front aspect-video right-0 border-slate-700 bg-gradient-to-l from-slate-700 via-slate-600 via-slate-600 to-slate-900   border  rounded-xl " >
           {/* <FrontCard data={data} /> */}
           <p className="text-[40px] lg:text-[60px] font-bold text-white">{data.name}</p>
@@ -72,6 +76,7 @@ const Card = ({data}) => {
           <BackCard data={data} />
         </div>
       </div>
+        </Fade>
     </div>
   );
 };
@@ -94,7 +99,7 @@ const BackCard = ({data}) => {
         <p className="font-semibold text-white text-sm md:text-lg">GitHub :</p>
         <a href={data.github} className="text-sm md:text-lg flex flex-1 flex-row justify-end underline underline-offset-2">View</a>
         </div>
-        <div className="text-white flex flex-row  items-center gap-5">
+        <div className={data.preview==""?"hidden":"text-white flex flex-row  items-center gap-5"}>
         <p className="font-semibold text-white text-sm md:text-lg">Preview :</p>
         <a href={data.preview} className="text-sm md:text-lg flex flex-1 flex-row justify-end underline underline-offset-2">View</a>
         </div>

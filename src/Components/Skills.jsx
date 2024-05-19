@@ -1,5 +1,6 @@
 
 import React, { useState } from "react";
+import { Fade } from "react-reveal";
 
 function Skills() {
   const skills = [
@@ -24,16 +25,19 @@ function Skills() {
       <div className="border-gray-300 w-[90vw] bg-gray-900 shadow-black shadow-2xl border border-l-2 rounded-lg   items-center justify-center flex">
         {/* <LeftContent/> */}
         <div className="sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-20 py-10 gap-x-6 gap-y-2 items-center justify-center">
+       <Fade bottom duration="1500">
+
         {skills.map((data, index) => {
-            return (
-              //   <div key={index} className='w-[100px] lg:w-[140px] my-5 mx-5 rounded-full shadow-black shadow-2xl  p-4 bg-gradient-to-bl from-blue-700 to-purple-900 aspect-square items-center justify-center flex'>
-              //   <p className='text-center font-semibold text-lg text-white'>{data}</p>
-              //  </div>
-              <div key={index} className="">
+          return (
+            //   <div key={index} className='w-[100px] lg:w-[140px] my-5 mx-5 rounded-full shadow-black shadow-2xl  p-4 bg-gradient-to-bl from-blue-700 to-purple-900 aspect-square items-center justify-center flex'>
+            //   <p className='text-center font-semibold text-lg text-white'>{data}</p>
+            //  </div>
+            <div key={index} className="cursor-pointer">
                 <SkillCircle openTxt={data.name} closedTxt={data.percentage} />
               </div>
             );
           })}
+          </Fade>
         </div>
       </div>
         <p className="text-[20px] md:text-[30px] font-semibold mt-10 text-white text-center">

@@ -82,8 +82,8 @@ function Profiles() {
           {data.description}
           </div>
 
-          <div className="px-6 py-2 bg-slate-600 text-center rounded-xl">
-            <a>View</a>
+          <div  className="px-6 py-2 bg-slate-600 text-center rounded-xl">
+            <a href={data.link}>View</a>
           </div>
       </div>
     )

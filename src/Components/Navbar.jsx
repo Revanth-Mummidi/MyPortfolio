@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
 
@@ -46,16 +46,16 @@ function Navbar() {
 function SideNavBar({ options , setSideNav}) {
   return (
     <div className="absolute lg:hidden right-0 top-0 ">
-      <div className="relative flex flex-col  bg-slate-800 h-screen   items-center ">
-        <div className="flex-row justify-center items-center py-5 px-4   bg-slate-500  flex w-full">
+      <div className="relative flex flex-col   h-screen   items-center ">
+        <div className="flex-row justify-between items-center py-5  px-10   bg-slate-500  flex w-full">
           <a href="#homepage" className="md:text-2xl cursor-pointer text-lg text-white mr-7  font-bold">Revanth</a>
           <IoClose className="text-white md:text-2xl text-lg font-bold" onClick={()=>{setSideNav(false)}} />
         </div>
-        <div className="flex flex-col py-7 flex-1 items-start opacity-[0.9]  ">
+        <div className="flex flex-col py-7 px-20 flex-1 items-start opacity bg-slate-950 opacity-[0.95] ">
           {options.map((item, index) => {
             return (
-              <div key={index} className="my-5 h-[50px] items-center flex cursor-pointer justify-center">
-                <a href={item.path} className="text-white text-start text-sm md:text-base hover:underline hover:underline-offset-4  hover:text-slate-300 ">{item.name}</a>
+              <div key={index} className="my-5 h-[50px] items-center opacity-100 flex cursor-pointer justify-center">
+                <a href={item.path} className="text-white font-semibold text-start text-base md:text-lg hover:underline hover:underline-offset-4  hover:text-slate-300 ">{item.name}</a>
               </div>
             );
           })}
