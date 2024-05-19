@@ -31,6 +31,7 @@ function Contact() {
               <FaLinkedin className='h-[60px] w-[60px] text-white hover:text-slate-500 font-bold'/>
                </a>
           </div>
+          <p className='font-semibold mt-5'>©️ 2024 Mummidi Revanth Portfolio. All rights reserved</p>
       </div>
    </section>
   )
