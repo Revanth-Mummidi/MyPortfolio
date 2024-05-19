@@ -1,5 +1,6 @@
 
 import React from "react";
+import { Fade } from "react-reveal";
 
 function Achievements() {
  
@@ -23,6 +24,7 @@ function Achievements() {
       </p>
       <div className="border-gray-300  bg-gray-900 w-[90vw] shadow-black shadow-2xl border border-l-2 rounded-lg  p-10 items-center justify-center flex">
         <div className="overflow-x-auto no-scrollbar">
+      <Fade left duration="2000">
          <ul className="list-disc gap-5">
 
           {
@@ -33,9 +35,9 @@ function Achievements() {
             })
           }
          </ul>
+        </Fade>
           </div>
       </div>
-         
     
     </section>
   );

@@ -53,19 +53,23 @@ const VolunteerExperienceData=[
       <div className="border-gray-300 w-[90vw] bg-gray-900 shadow-black shadow-2xl border border-l-2 rounded-lg   items-center justify-center flex flex-col">
         <p className="text-white text-3xl mt-10 font-semibold">Intern Experience</p>
         <div className="sm:grid sm:grid-cols-1 md:grid-cols-1 xl:grid-cols-2  px-5 md:px-10 py-10 gap-x-12 gap-y-2 items-center justify-center">
+        <Fade left duration="1500">
           {
             ExperienceData.map((data,index)=>{
               return(
                 <Card key={index} data={data}/>
               )
             })
-          }          
+          }    
+          </Fade>      
         </div>
        <div className="flex flex-row w-full border border-white">
 
        </div>
         <p className="text-white text-3xl mt-10 font-semibold">Volunteer Experience</p>
+        <Fade left duration="1500">
         <div className="flex flex-row items-center justify-center">
+          
           {
             VolunteerExperienceData.map((data,index)=>{
               return(
@@ -74,6 +78,7 @@ const VolunteerExperienceData=[
             })
           }          
         </div>
+        </Fade>
       </div>
       <p className="text-[20px] md:text-[30px] font-semibold mt-10 text-white text-center">
       Click on the card to check the description
@@ -85,8 +90,8 @@ const VolunteerExperienceData=[
 const Card = ({data}) => {
   const [rotate, setRotate] = useState(true);
   return (
+     
     <div className="flip-card cursor-pointer mx-auto my-8">
-      <Fade left duration="1500">
       <div
         onClick={() => {
           setRotate(!rotate);
@@ -103,8 +108,8 @@ const Card = ({data}) => {
           <BackCard data={data} />
         </div>
       </div>
-        </Fade>
     </div>
+   
   );
 };
 

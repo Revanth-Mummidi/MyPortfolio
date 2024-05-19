@@ -1,4 +1,5 @@
 import React from 'react'
+import { Fade } from 'react-reveal';
 
 
 function Profiles() {
@@ -53,16 +54,17 @@ function Profiles() {
         </p>
         <div className="border-gray-300 w-[90vw] bg-gray-900  shadow-black shadow-2xl border border-l-2 rounded-lg  p-10 pt-5 items-center justify-center flex">
           <div className="overflow-auto no-scrollbar flex flex-row py-10">
-  
+          <Fade left duration="2500">
             {
               ProfilesData.map((data,index)=>{
                 return(
-                  <div className="" key={index}>
+                  <a href={data.link} className="" key={index}>
                     <Card data={data} />
-                    </div>
+                    </a>
                 )
               })
             }
+            </Fade>
             </div>
         </div>
       

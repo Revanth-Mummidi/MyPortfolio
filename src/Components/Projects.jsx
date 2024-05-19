@@ -38,13 +38,15 @@ function Projects() {
       </p>
       <div className="border-gray-300 bg-gray-900 w-[90vw] shadow-black shadow-2xl border border-l-2 rounded-lg   items-center justify-center flex">
         <div className="sm:grid sm:grid-cols-1 md:grid-cols-1 xl:grid-cols-2 px-5 md:px-10 py-10 gap-x-12 gap-y-2 items-center justify-center">
+        <Fade left duration="1500">
           {
             ProjectsData.map((data,index)=>{
               return(
                 <Card key={index} data={data}/>
               )
             })
-          }          
+          }        
+          </Fade>  
         </div>
       </div>
       <p className="text-[20px] md:text-[30px] font-semibold mt-10 text-white text-center">
@@ -58,7 +60,7 @@ const Card = ({data}) => {
   const [rotate, setRotate] = useState(true);
   return (
     <div className="flip-card cursor-pointer mx-auto my-8">
-      <Fade left duration="1500">
+    
 
       <div
         onClick={() => {
@@ -76,7 +78,6 @@ const Card = ({data}) => {
           <BackCard data={data} />
         </div>
       </div>
-        </Fade>
     </div>
   );
 };
