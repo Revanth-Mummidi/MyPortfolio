@@ -15,7 +15,7 @@ function Experience() {
      duration:"-",
      location:"Remote",
      started:"Sep 2023",
-     ended:"Present",
+     ended:"Working Currently",
      description:( <p>In this internship I am currently working as a front end developer.I have completed Self Assessment Screens and integrated with <b> Api.</b> <br/> I also used <b>Redux</b> in the website. I made responsive designs using <b>Tailwind CSS</b></p>),
   },
   {
@@ -37,7 +37,7 @@ const VolunteerExperienceData=[
      duration:"-",
      location:"VIIT",
      started:"Sep 2023",
-     ended:"Present",
+     ended:"Still in the role",
      description:( <p>I worked as Hacker Earth Lead in our College.In which my responsbility is to improve coding culture in our college.<br/>As a part of it I worked as a problem setter for weekly coding contest with average participation of <b>500+</b> students. <br></br>I also conducted a national wide coding contest Code-Sprint as a part of Vista Technical Event in our College with nearly <b>400</b> participants. We also conducted seminars to junios on Competitve Coding.</p>),
   },
  
@@ -115,7 +115,7 @@ const Card = ({data}) => {
 
 const FrontCard = ({data}) => {
   return (
-    <div className="p-4 cursor-pointer w-full h-[270px] md:h-full overflow-y-scroll no-scrollbar flex">
+    <div className="p-4 cursor-pointer w-full h-[270px] lg:h-full overflow-y-scroll no-scrollbar flex">
       <div className="w-full h-full flex flex-col ">
         <div className="flex flex-row justify-between items-center">
           {/* <div className="w-[50px] md:w-[80px] aspect-video bg-blue-900 rounded-lg"></div> */}
@@ -151,7 +151,7 @@ const FrontCard = ({data}) => {
 };
 const BackCard = ({data}) => {
   return (
-    <div className="p-4 cursor-pointer w-full h-[270px] md:h-full overflow-y-auto no-scrollbar flex ">
+    <div className="p-4 cursor-pointer w-full h-[270px] lg:h-full overflow-y-auto no-scrollbar flex ">
     <div className="w-full h-full flex flex-col">
       <div className="flex flex-row justify-center items-center">
         
