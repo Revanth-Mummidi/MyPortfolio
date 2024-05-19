@@ -21,9 +21,11 @@ function HomePage() {
             <div className='grid  grid-cols-1 md:grid-cols-2 h-full w-full '>
                 <div className='flex flex-1 flex-row items-center justify-center'>
                     <div className='flex  relative flex-col gap-5'>
+                    <div className='mb-10 md:mb-0'>
 
                     <LeftContent/>
-                    <p className='md:hidden text-[25px] text-center font-semibold mt-3'>Click to know about me ☝️</p>
+                    <p className='md:hidden text-[25px] text-center font-semibold '>Click to know about me ☝️</p>
+                    </div>
                     <div className='absolute hidden md:block -top-10 -right-28 lg:-right-28 '>
                     <div className='flex flex-col gap-5 '>
 
