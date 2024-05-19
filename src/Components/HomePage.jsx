@@ -23,7 +23,8 @@ function HomePage() {
                     <div className='flex  relative flex-col gap-5'>
 
                     <LeftContent/>
-                    <div className='absolute -top-10 -right-28 lg:-right-28 '>
+                    <p className='md:hidden text-[25px] text-center font-semibold mt-3'>Click to know about me ☝️</p>
+                    <div className='absolute hidden md:block -top-10 -right-28 lg:-right-28 '>
                     <div className='flex flex-col gap-5 '>
 
                     <p className='font-semibold text-2xl md:text-3xl text-center'>Click here</p> 
@@ -65,7 +66,7 @@ function LeftContent(){
        <img
          src={ProfilePic}
          className={
-           "bg-gradient-to-bl flip-card-front shadow-2xl shadow-black   rounded-full w-[300px] md:w-[400px] aspect-square mx-auto  justify-center items-center transition-transform delay-700"
+           "bg-gradient-to-bl flip-card-front shadow-2xl shadow-black   rounded-full w-[300px] lg:w-[400px] aspect-square mx-auto  justify-center items-center transition-transform delay-700"
          }
        >
     
@@ -74,7 +75,7 @@ function LeftContent(){
        <div
          className={
           
-             " flip-card-back  shadow-2xl shadow-black  bg-gradient-to-bl from-slate-700 via-slate-600 via-slate-600 to-slate-900  p-10 rounded-full w-[300px] md:w-[400px] aspect-square mx-auto  justify-center items-center transition-transform delay-700"
+             " flip-card-back  shadow-2xl shadow-black  bg-gradient-to-bl from-slate-700 via-slate-600 via-slate-600 to-slate-900  p-10 rounded-full w-[300px] lg:w-[400px] aspect-square mx-auto  justify-center items-center transition-transform delay-700"
          }
        >
          <div className="w-full h-full  flex flex-col ">
