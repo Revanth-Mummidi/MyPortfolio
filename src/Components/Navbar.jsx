@@ -14,7 +14,7 @@ function Navbar() {
     { name: "Contact", path: "#contact" },
   ];
   return (
-    <div className="fixed flex flex-row  bg-slate-950  items-center py-4 px-7 w-full  z-10 ">
+    <div className="fixed flex flex-row  bg-slate-950 shadow-2xl shadow-slate-500  items-center py-4 px-7 w-full  z-10 ">
       <div className="self-start flex ">
         <a href="#homepage" className="md:text-2xl cursor-pointer text-lg text-white  font-bold">Revanth</a>
       </div>
