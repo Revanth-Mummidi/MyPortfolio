@@ -53,7 +53,7 @@ const VolunteerExperienceData=[
       <div className="border-gray-300 w-[90vw] bg-gray-900 shadow-black shadow-2xl border border-l-2 rounded-lg   items-center justify-center flex flex-col">
         <p className="text-white text-3xl mt-10 font-semibold">Intern Experience</p>
         <div className="sm:grid sm:grid-cols-1 md:grid-cols-1 xl:grid-cols-2  px-5 md:px-10 py-10 gap-x-12 gap-y-2 items-center justify-center">
-        <Fade left duration="1500">
+        <Fade left duration={1500}>
           {
             ExperienceData.map((data,index)=>{
               return(
@@ -67,7 +67,7 @@ const VolunteerExperienceData=[
 
        </div>
         <p className="text-white text-3xl mt-10 font-semibold">Volunteer Experience</p>
-        <Fade left duration="1500">
+        <Fade left duration={1500}>
         <div className="flex flex-row items-center justify-center">
           
           {

@@ -14,19 +14,19 @@ function App() {
     <div className="overflow-y-auto no-scrollbar bg-slate-700">
       <Navbar />
       <HomePage />
-      <Fade bottom duration="1500" distance="150px">
+      <Fade bottom duration={1500} distance="150px">
         <Skills />
       </Fade>
-      <Fade bottom duration="1500" distance="150px">
+      <Fade bottom duration={1500} distance="150px">
         <Experience />
       </Fade>
-      <Fade bottom duration="1500" distance="150px">
+      <Fade bottom duration={1500} distance="150px">
         <Projects />
       </Fade>
-      <Fade bottom duration="1500" distance="150px">
+      <Fade bottom duration={1500} distance="150px">
         <Achievements />
       </Fade>
-      <Fade bottom duration="1500" distance="150px">
+      <Fade bottom duration={1500} distance="150px">
         <Profiles />
       </Fade>
       <Contact />

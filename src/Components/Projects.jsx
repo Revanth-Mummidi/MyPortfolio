@@ -38,7 +38,7 @@ function Projects() {
       </p>
       <div className="border-gray-300 bg-gray-900 w-[90vw] shadow-black shadow-2xl border border-l-2 rounded-lg   items-center justify-center flex">
         <div className="sm:grid sm:grid-cols-1 md:grid-cols-1 xl:grid-cols-2 px-5 md:px-10 py-10 gap-x-12 gap-y-2 items-center justify-center">
-        <Fade left duration="1500">
+        <Fade left duration={1500}>
           {
             ProjectsData.map((data,index)=>{
               return(

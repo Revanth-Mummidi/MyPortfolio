@@ -1,18 +1,19 @@
-
 import React, { useState } from "react";
+import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
 import { Fade } from "react-reveal";
 
 function Skills() {
   const skills = [
-    { name: "React JS", percentage: "85%" },
-    { name: "React Native", percentage: "90%" },
-    { name: "Node JS", percentage: "75%" },
-    { name: "Mongo DB", percentage: "75%" },
-    { name: "Express JS", percentage: "75%" },
-    { name: "C++", percentage: "90%" },
-    { name: "Python", percentage: "75%" },
-    { name: "DSA", percentage: "85%" },
+    { name: "React JS", percentage: 85 },
+    { name: "React Native", percentage: 90 },
+    { name: "Node JS", percentage: 75 },
+    { name: "Mongo DB", percentage: 75 },
+    { name: "Express JS", percentage: 75 },
+    { name: "C++", percentage: 90 },
+    { name: "Python", percentage: 75},
+    { name: "DSA", percentage: 85 },
   ];
+  const val = 66;
   return (
     <section
       id="skills"
@@ -21,26 +22,28 @@ function Skills() {
       <p className="text-[35px] my-10 md:text-[40px] font-bold text-white">
         Skills
       </p>
-          
+
       <div className="border-gray-300 w-[90vw] bg-gray-900 shadow-black shadow-2xl border border-l-2 rounded-lg   items-center justify-center flex">
         {/* <LeftContent/> */}
         <div className="sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-20 py-10 gap-x-6 gap-y-2 items-center justify-center">
-       <Fade bottom duration="1500">
-
-        {skills.map((data, index) => {
-          return (
-            //   <div key={index} className='w-[100px] lg:w-[140px] my-5 mx-5 rounded-full shadow-black shadow-2xl  p-4 bg-gradient-to-bl from-blue-700 to-purple-900 aspect-square items-center justify-center flex'>
-            //   <p className='text-center font-semibold text-lg text-white'>{data}</p>
-            //  </div>
-            <div key={index} className="cursor-pointer">
-                <SkillCircle openTxt={data.name} closedTxt={data.percentage} />
-              </div>
-            );
-          })}
+          <Fade bottom duration={1500}>
+            {skills.map((data, index) => {
+              return (
+                //   <div key={index} className='w-[100px] lg:w-[140px] my-5 mx-5 rounded-full shadow-black shadow-2xl  p-4 bg-gradient-to-bl from-blue-700 to-purple-900 aspect-square items-center justify-center flex'>
+                //   <p className='text-center font-semibold text-lg text-white'>{data}</p>
+                //  </div>
+                <div key={index} className="cursor-pointer">
+                  <SkillCircle
+                    openTxt={data.name}
+                    closedTxt={data.percentage}
+                  />
+                </div>
+              );
+            })}
           </Fade>
         </div>
       </div>
-        <p className="text-[20px] md:text-[30px] font-semibold mt-10 text-white text-center">
+      <p className="text-[20px] md:text-[30px] font-semibold mt-10 text-white text-center">
         Click on the skill to check the percentage
       </p>
     </section>
@@ -52,7 +55,7 @@ function SkillCircle({ openTxt, closedTxt }) {
   return (
     <div className=" self-center cursor-pointer flip-card">
       <div
-        onClick={()=>{
+        onClick={() => {
           setRotate(!rotate);
         }}
         className={
@@ -72,13 +75,14 @@ function SkillCircle({ openTxt, closedTxt }) {
         </div>
         <div
           className={
-            "bg-gradient-to-bl flip-card-back  shadow-2xl shadow-black  from-slate-300 via-slate-200 via-slate-500 to-slate-600 p-4 rounded-full w-[100px] lg:w-[140px] aspect-square my-5 mx-5   justify-center items-center transition-transform delay-700"
+            "bg-gradient-to-bl flip-card-back  shadow-2xl shadow-black  from-slate-300 via-slate-200 via-slate-500 to-slate-600  rounded-full  my-5 mx-5   justify-center items-center transition-transform delay-700"
           }
         >
-          <div className="w-full h-full relative flex flex-col items-center justify-center">
-            <p className="text-center font-semibold text-lg text-white">
+          <div className="w-full  h-full relative flex flex-col items-center justify-center">
+            {/* <p className="text-center font-semibold text-lg text-white">
               {closedTxt}
-            </p>
+            </p> */}
+            <CircularProgress value={closedTxt} />
           </div>
         </div>
       </div>
@@ -86,4 +90,36 @@ function SkillCircle({ openTxt, closedTxt }) {
   );
 }
 
+const CircularProgress = ({ value }) => {
+  return (
+    <div  className="w-[100px] lg:w-[140px] aspect-square relative" >
+      <CircularProgressbar
+        value={value}
+        background
+        backgroundPadding={4}
+        styles={buildStyles({
+          backgroundColor: "transparent",
+          textColor: "rgb(51 65 85 / var(--tw-bg-opacity))",
+          pathColor: "rgb(229 231 235  / var(--tw-bg-opacity))",
+          trailColor: "transparent",
+          textSize: "20px",
+        })}
+      />
+      <div
+        style={{
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          fontSize: "16px",
+          fontWeight: "bold",
+        }}
+      >
+        <p className="text-center font-bold text-lg text-gray-200">
+          {`${value}%`}
+        </p>
+      </div>
+    </div>
+  );
+};
 export default Skills;

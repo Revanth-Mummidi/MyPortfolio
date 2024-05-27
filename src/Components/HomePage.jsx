@@ -2,6 +2,7 @@ import React, {  useState } from 'react'
 import ProfilePic from "../Assets/ProfilePic-photoaidcom-cropped.jpg"
 import { Fade } from 'react-reveal';
 import Arrow from "../Assets/toppng.com-arrow-pointing-to-left-comments-curved-arrow-vector-980x858.png"
+import { TypeAnimation } from 'react-type-animation';
 
 function HomePage() {
   const Abilities=["Full Stack Web Developer","React Native Developer","Competitive Programmer"];
@@ -15,7 +16,7 @@ function HomePage() {
 
   return (
     <section className='bg-slate-700 mt-[60px] h-[100vh] w-[100vw] text-white justify-center items-center py-5 mb-10' id='homepage'>
-         <Fade bottom duration="1500" distance="120px">
+         <Fade bottom duration={1500} distance="120px">
 
     
             <div className='grid  grid-cols-1 md:grid-cols-2 h-full w-full '>
@@ -39,12 +40,27 @@ function HomePage() {
                     <div className='flex flex-col gap-3 lg:gap-6' >
                         <p className='font-sans font-semibold  text-[30px]  lg:text-[40px]'>Hello , I'm </p>
                         <p className='font-sans font-semibold text-[40px]  lg:text-[50px] text-orange-300 '>Revanth Mummidi</p>
-                        <p className='font-sans font-semibold mt-3 text-[20px] lg:text-[30px] '>{Abilities[idx]}</p>
+                        <TypeAnimation
+      sequence={[
+        // Same substring at the start will only be typed out once, initially
+        'Full Stack Web Developer',
+        1000, // wait 1s before replacing "Mice" with "Hamsters"
+        'React Native Developer',
+        1000,
+        'Competitive Programmer',
+        1000,
+      ]}
+      wrapper="span"
+      speed={50}
+      className='font-sans font-semibold mt-3 text-[20px] lg:text-[30px] '
+      repeat={Infinity}
+    />
+                        {/* <p className='font-sans font-semibold mt-3 text-[20px] lg:text-[30px] '>{Abilities[idx]}</p> */}
                         <div className='flex flex-row mt-5 gap-5 justify-center md:justify-start items-center  '>
                            <a href={"mailto:mummidirevanth@gmail.com"}>
                              <CustomButton content={"Hire Me"}  />
                             </a>
-                            <a href="https://drive.google.com/file/d/11EHZH1jkyQ8pb7w278LFrppHkgwJeqZD/view?usp=sharing">
+                            <a href="https://drive.google.com/file/d/17-obb6rwRPOceS6u4l-mxHdiMY59pF1y/view?usp=sharing">
 
                             <CustomButton content={"Resume"}/>
                             </a>

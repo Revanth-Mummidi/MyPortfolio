@@ -53,14 +53,14 @@ function Profiles() {
           Profiles
         </p>
         <div className="border-gray-300 w-[90vw] bg-gray-900  shadow-black shadow-2xl border border-l-2 rounded-lg  p-10 pt-5 items-center justify-center flex">
-          <Fade left duration="2500">
+          <Fade left duration={2500}>
           <div className="overflow-auto no-scrollbar flex flex-row py-10">
             {
               ProfilesData.map((data,index)=>{
                 return(
-                  <a href={data.link} className="" key={index}>
+                  <div  className="" key={index}>
                     <Card data={data} />
-                    </a>
+                    </div>
                 )
               })
             }
