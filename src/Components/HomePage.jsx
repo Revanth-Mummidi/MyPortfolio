@@ -15,7 +15,7 @@ function HomePage() {
   
 
   return (
-    <section className='bg-slate-700 mt-[60px] h-[100vh] w-[100vw] text-white justify-center items-center py-5 mb-10' id='homepage'>
+    <section className='bg-slate-700 mt-[170px]  w-[100vw] text-white justify-center items-center py-5 mb-10' id='homepage'>
          <Fade bottom duration={1500} distance="120px">
 
     
