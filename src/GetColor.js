@@ -33,7 +33,7 @@ const LightThemeColors={
     gradient_colors2:"from-slate-700 via-slate-600 via-slate-600 to-slate-900"
 }
 function GetColor({theme}) {
-    console.log("THEME=",theme);
+   
    if(theme==="Dark")
     {
         return DarkThemeColors;
