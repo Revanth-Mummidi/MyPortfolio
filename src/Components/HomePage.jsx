@@ -15,7 +15,7 @@ function HomePage() {
   
 
   return (
-    <section className='bg-slate-700 mt-[170px]  w-[100vw] text-white justify-center items-center py-5 mb-10' id='homepage'>
+    <section className='mt-[170px]  w-[100vw]  justify-center items-center py-5 mb-10' id='homepage'>
          <Fade bottom duration={1500} distance="120px">
 
     
@@ -98,8 +98,8 @@ function LeftContent(){
        >
          <div className="w-full h-full  flex flex-col ">
 
-          <p className='underline underline-offset-4 font-bold text-xl text-white text-center'>About me</p>
-           <p className="text-white font-semibold   mt-4 overflow-y-auto no-scrollbar p-5 text-wrap">
+          <p className='underline underline-offset-4 font-bold text-xl  text-center'>About me</p>
+           <p className=" font-semibold   mt-4 overflow-y-auto no-scrollbar p-5 text-wrap">
             I'm a passionate full stack developer and also competitive programmer.
             I'm currently pursing B.Tech 3rd year at Vignan's Institute of Information technology.
             I have strong foundation in web development and also in Frontend Android Development.

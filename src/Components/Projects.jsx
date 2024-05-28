@@ -31,9 +31,9 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="w-[100vw] bg-slate-700 flex flex-col items-center justify-center p-10"
+      className="w-[100vw] flex flex-col items-center justify-center p-10"
     >
-      <p className="text-[35px] my-10 md:text-[40px] font-bold text-white ">
+      <p className="text-[35px] my-10 md:text-[40px] font-bold  ">
         Projects
       </p>
       <div className="border-gray-300 bg-gray-900 w-[90vw] shadow-black shadow-2xl border border-l-2 rounded-lg   items-center justify-center flex">
@@ -49,7 +49,7 @@ function Projects() {
           </Fade>  
         </div>
       </div>
-      <p className="text-[20px] md:text-[30px] font-semibold mt-10 text-white text-center">
+      <p className="text-[20px] md:text-[30px] font-semibold mt-10  text-center">
         Click on the card to check the description
       </p>
     </section>
@@ -72,7 +72,7 @@ const Card = ({data}) => {
         >
         <div  className="lg:w-[520px] flex flex-row justify-center items-center xl:w-[500px] sm:w-[400px] w-[280px]  shadow-2xl shadow-black flip-card-front aspect-video right-0 border-slate-700 bg-gradient-to-l from-slate-700 via-slate-600 via-slate-600 to-slate-900   border  rounded-xl " >
           {/* <FrontCard data={data} /> */}
-          <p className="text-[40px] lg:text-[60px] font-bold text-white">{data.name}</p>
+          <p className="text-[40px] lg:text-[60px] font-bold ">{data.name}</p>
         </div>
         <div className="lg:w-[520px] xl:w-[500px]  sm:w-[400px] w-[280px] shadow-2xl shadow-black blur-0 flip-card-back aspect-video right-0 border-slate-800 border  bg-slate-700 rounded-xl ">
           <BackCard data={data} />
@@ -89,26 +89,26 @@ const BackCard = ({data}) => {
     <div className="w-full h-full flex flex-col">
       <div className="flex flex-row justify-center items-center">
         
-        <p className="text-white  font-semibold text-lg md:text-2xl">Details</p>
+        <p className="  font-semibold text-lg md:text-2xl">Details</p>
       </div>
       <hr className="my-3"></hr>
-      <div className="text-white flex flex-row  items-center gap-5">
-        <p className="font-semibold text-white text-sm md:text-lg">Frameworks :</p>
+      <div className=" flex flex-row  items-center gap-5">
+        <p className="font-semibold  text-sm md:text-lg">Frameworks :</p>
         <p className="text-sm md:text-lg flex flex-1 flex-row justify-end">{data.tech}</p>
         </div>
-        <div className="text-white flex flex-row  items-center gap-5">
-        <p className="font-semibold text-white text-sm md:text-lg">GitHub :</p>
+        <div className=" flex flex-row  items-center gap-5">
+        <p className="font-semibold  text-sm md:text-lg">GitHub :</p>
         <a href={data.github} className="text-sm md:text-lg flex flex-1 flex-row justify-end underline underline-offset-2">View</a>
         </div>
-        <div className={data.preview==""?"hidden":"text-white flex flex-row  items-center gap-5"}>
-        <p className="font-semibold text-white text-sm md:text-lg">Preview :</p>
+        <div className={data.preview==""?"hidden":" flex flex-row  items-center gap-5"}>
+        <p className="font-semibold  text-sm md:text-lg">Preview :</p>
         <a href={data.preview} className="text-sm md:text-lg flex flex-1 flex-row justify-end underline underline-offset-2">View</a>
         </div>
        
-        <div className="text-white flex flex-row  items-center gap-6">
-        <p className="font-semibold text-white text-sm md:text-lg text-start self-start ">Description : </p>
+        <div className=" flex flex-row  items-center gap-6">
+        <p className="font-semibold  text-sm md:text-lg text-start self-start ">Description : </p>
         
-      <div className="flex flex-row text-white font-normal justify-start flex-1 pb-2 ">
+      <div className="flex flex-row  font-normal justify-start flex-1 pb-2 ">
          <p className="text-sm md:text-lg flex flex-1 flex-row justify-end">
           {data.description}
           </p>

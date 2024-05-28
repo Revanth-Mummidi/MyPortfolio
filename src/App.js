@@ -10,9 +10,28 @@ import Profiles from "./Components/Profiles";
 import { Fade } from "react-reveal";
 import AnimatedCursor from "react-animated-cursor";
 
+import BgVideo from "./Assets/mixkit-night-sky-covered-with-stars-39768-hd-ready.mp4"
+import {  useSelector } from "react-redux";
+
+
+import GetColor from "./GetColor";
+
 function App() {
+  const Color = GetColor(useSelector(state=>state.theme));
   return (
-    <div className="overflow-y-auto no-scrollbar bg-slate-700">
+   
+
+  
+    <div className={`overflow-y-auto gap-0 ${Color.background_color} ${Color.text_color}  relative no-scrollbar `}>
+       {/* <video
+        autoPlay
+        loop
+        muted
+        className="absolute top-0 left-0 w-[100%] h-[100%] object-fill -z-10"
+      >
+        <source src={BgVideo} type="video/mp4" />
+        
+      </video> */}
       <div className="cursor__dot">
         <AnimatedCursor
           innerSize={15}
@@ -42,6 +61,7 @@ function App() {
       </Fade>
       <Contact />
     </div>
+
   );
 }
 

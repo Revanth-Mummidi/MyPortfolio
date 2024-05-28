@@ -4,6 +4,7 @@ import HyggexLogo from "../Assets/hyggexworld_logo.jpeg"
 import HackerEarth from "../Assets/HE_identity.png";
 import React, { useState } from "react";
 import { Fade } from "react-reveal";
+import BgVideo from "../Assets/mixkit-night-sky-covered-with-stars-39768-hd-ready.mp4";
 
 function Experience() {
  
@@ -45,23 +46,16 @@ const VolunteerExperienceData=[
   return (
     <section
       id="experience"
-      className=" w-[100vw] bg-slate-700 flex flex-col items-center justify-center p-10"
+      className=" w-[100vw] relative  flex flex-col items-center justify-center p-10"
     >
 
-      <p className="text-[35px] my-10 md:text-[40px] font-bold text-white ">
+      <p className="text-[35px] my-10 md:text-[40px] font-bold  ">
         Experience
       </p>
-      <div className="border-gray-300 relative w-[90vw] bg-gray-900 shadow-black shadow-2xl border border-l-2 rounded-lg   items-center justify-center flex flex-col">
-      {/* <video
-        autoPlay
-        loop
-        muted
-        className="absolute top-0 left-0 w-full h-full object-cover z-0"
-      >
-        <source src="/path/to/your/video.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video> */}
-        <p className="text-white text-3xl mt-10 font-semibold">Intern Experience</p>
+      <div className="border-gray-300 w-[90vw] bg-gray-900 shadow-black shadow-2xl border border-l-2 rounded-lg   items-center justify-center flex flex-col">
+     
+     
+        <p className=" text-3xl mt-10 font-semibold">Intern Experience</p>
         <div className="sm:grid sm:grid-cols-1 md:grid-cols-1 xl:grid-cols-2  px-5 md:px-10 py-10 gap-x-12 gap-y-2 items-center justify-center">
         <Fade left duration={1500}>
           {
@@ -76,7 +70,7 @@ const VolunteerExperienceData=[
        <div className="flex flex-row w-full border border-white">
 
        </div>
-        <p className="text-white text-3xl mt-10 font-semibold">Volunteer Experience</p>
+        <p className=" text-3xl mt-10 font-semibold">Volunteer Experience</p>
         <Fade left duration={1500}>
         <div className="flex flex-row items-center justify-center">
           
@@ -90,7 +84,7 @@ const VolunteerExperienceData=[
         </div>
         </Fade>
       </div>
-      <p className="text-[20px] md:text-[30px] font-semibold mt-10 text-white text-center">
+      <p className="text-[20px] md:text-[30px] font-semibold mt-10  text-center">
       Click on the card to check the description
       </p>
     </section>
@@ -111,7 +105,7 @@ const Card = ({data}) => {
         }
       >
 
-        <div className="lg:w-[520px] xl:w-[500px]  sm:w-[400px]  w-[280px] shadow-2xl shadow-black flip-card-front aspect-video right-0 border-slate-700  border bg-gradient-to-l from-slate-700 via-slate-600 via-slate-600 to-slate-900 rounded-xl ">
+        <div className="lg:w-[520px] xl:w-[500px]  sm:w-[400px]  w-[280px] shadow-2xl shadow-black flip-card-front aspect-video right-0 border-slate-800  border bg-gradient-to-l from-slate-700 via-slate-600 via-slate-600 to-slate-900 rounded-xl ">
           <FrontCard data={data} />
         </div>
         <div className="lg:w-[520px] xl:w-[500px]  sm:w-[400px] w-[280px] shadow-2xl shadow-black flip-card-back aspect-video right-0 border-slate-800 border  bg-slate-700 rounded-xl ">
@@ -130,10 +124,10 @@ const FrontCard = ({data}) => {
         <div className="flex flex-row justify-between items-center">
           {/* <div className="w-[50px] md:w-[80px] aspect-video bg-blue-900 rounded-lg"></div> */}
           <img src={data.path} className="w-[50px] md:w-[80px]  rounded-lg object-cover object-center" ></img>
-          <p className="text-white font-semibold text-lg md:text-2xl">{data.name}</p>
+          <p className=" font-semibold text-lg md:text-2xl">{data.name}</p>
         </div>
         <hr className="my-3"></hr>
-        <div className="flex flex-col text-white font-normal justify-center flex-1 ">
+        <div className="flex flex-col  font-normal justify-center flex-1 ">
            <div className="flex flex-row justify-between ">
               <p>Role :-</p>
               <p>{data.role}</p>
@@ -165,10 +159,10 @@ const BackCard = ({data}) => {
     <div className="w-full h-full flex flex-col">
       <div className="flex flex-row justify-center items-center">
         
-        <p className="text-white font-semibold text-lg md:text-2xl">Description</p>
+        <p className="font-semibold text-lg md:text-2xl">Description</p>
       </div>
       <hr className="my-3"></hr>
-      <div className="flex flex-col text-white font-normal justify-start flex-1 pb-2 ">
+      <div className="flex flex-col  font-normal justify-start flex-1 pb-2 ">
          {data.description}
       </div>
     </div>

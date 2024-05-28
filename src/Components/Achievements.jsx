@@ -17,9 +17,9 @@ function Achievements() {
   return (
     <section
       id="achievements"
-      className=" w-[100vw] bg-slate-700 flex flex-col items-center justify-center p-10"
+      className=" w-[100vw] flex flex-col items-center justify-center p-10"
     >
-      <p className="text-[35px] my-10 md:text-[40px] font-bold text-white ">
+      <p className="text-[35px] my-10 md:text-[40px] font-bold  ">
         Achievements
       </p>
       <div className="border-gray-300  bg-gray-900 w-[90vw] shadow-black shadow-2xl border border-l-2 rounded-lg  p-10 items-center justify-center flex">
@@ -30,7 +30,7 @@ function Achievements() {
           {
             AchievementsData.map((data,index)=>{
               return(
-                <li key={index} className="text-white font-semibold md:text-xl my-10 lg:text-3xl">{index+1} ) {data}</li>
+                <li key={index} className=" font-semibold md:text-xl my-10 lg:text-3xl">{index+1} ) {data}</li>
               )
             })
           }

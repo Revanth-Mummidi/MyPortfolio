@@ -17,9 +17,9 @@ function Skills() {
   return (
     <section
       id="skills"
-      className=" w-[100vw] md:mt-0  bg-slate-700 flex flex-col items-center justify-center p-10"
+      className=" w-[100vw] md:mt-0 flex flex-col items-center justify-center p-10"
     >
-      <p className="text-[35px] my-10 md:text-[40px] font-bold text-white">
+      <p className="text-[35px] my-10 md:text-[40px] font-bold ">
         Skills
       </p>
 
@@ -30,7 +30,7 @@ function Skills() {
             {skills.map((data, index) => {
               return (
                 //   <div key={index} className='w-[100px] lg:w-[140px] my-5 mx-5 rounded-full shadow-black shadow-2xl  p-4 bg-gradient-to-bl from-blue-700 to-purple-900 aspect-square items-center justify-center flex'>
-                //   <p className='text-center font-semibold text-lg text-white'>{data}</p>
+                //   <p className='text-center font-semibold text-lg '>{data}</p>
                 //  </div>
                 <div key={index} className="cursor-pointer">
                   <SkillCircle
@@ -44,7 +44,7 @@ function Skills() {
           </Fade>
         </div>
       </div>
-      <p className="text-[20px] md:text-[30px] font-semibold mt-10 text-white text-center">
+      <p className="text-[20px] md:text-[30px] font-semibold mt-10  text-center">
         Click on the skill to check the percentage
       </p>
     </section>
@@ -85,7 +85,7 @@ function SkillCircle({ openTxt, closedTxt }) {
           }
         >
           <div className="w-full h-full relative flex flex-col items-center justify-center ">
-            <p className="text-center font-semibold text-lg text-white">
+            <p className="text-center font-semibold text-lg ">
               {openTxt}
             </p>
           </div>
@@ -96,7 +96,7 @@ function SkillCircle({ openTxt, closedTxt }) {
           }
         >
           <div className="w-full  h-full relative flex flex-col items-center justify-center">
-            {/* <p className="text-center font-semibold text-lg text-white">
+            {/* <p className="text-center font-semibold text-lg ">
               {closedTxt}
             </p> */}
             <CircularProgress value={displayedPercent}  />

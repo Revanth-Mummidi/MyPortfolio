@@ -47,9 +47,9 @@ function Profiles() {
     return (
       <section
         id="profiles"
-        className=" w-[100vw] bg-slate-700 flex flex-col items-center justify-center p-10 mb-20 "
+        className=" w-[100vw]  flex flex-col  items-center justify-center p-10 mb-20 "
       >
-        <p className="text-[35px] my-10 md:text-[40px] font-bold text-white ">
+        <p className="text-[35px] my-10 md:text-[40px] font-bold  ">
           Profiles
         </p>
         <div className="border-gray-300 w-[90vw] bg-gray-900  shadow-black shadow-2xl border border-l-2 rounded-lg  p-10 pt-5 items-center justify-center flex">
@@ -74,7 +74,7 @@ function Profiles() {
   
   function Card({data}){
     return(
-      <div className="border w-[350px]  text-white font-semibold text-lg mx-5 rounded-2xl p-7 flex flex-col items-center gap-4">
+      <div className="border w-[350px]   font-semibold text-lg mx-5 rounded-2xl p-7 flex flex-col items-center gap-4">
           <img src={data.pic} className="w-[350px] aspect-video rounded-xl object-contain object-center">
   
           </img>
