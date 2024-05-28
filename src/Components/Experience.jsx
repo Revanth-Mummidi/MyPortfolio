@@ -52,7 +52,7 @@ const VolunteerExperienceData=[
         Experience
       </p>
       <div className="border-gray-300 relative w-[90vw] bg-gray-900 shadow-black shadow-2xl border border-l-2 rounded-lg   items-center justify-center flex flex-col">
-      <video
+      {/* <video
         autoPlay
         loop
         muted
@@ -60,7 +60,7 @@ const VolunteerExperienceData=[
       >
         <source src="/path/to/your/video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
-      </video>
+      </video> */}
         <p className="text-white text-3xl mt-10 font-semibold">Intern Experience</p>
         <div className="sm:grid sm:grid-cols-1 md:grid-cols-1 xl:grid-cols-2  px-5 md:px-10 py-10 gap-x-12 gap-y-2 items-center justify-center">
         <Fade left duration={1500}>
