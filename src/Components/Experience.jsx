@@ -16,7 +16,7 @@ function Experience() {
      location:"Remote",
      started:"Sep 2023",
      ended:"Working Currently",
-     description:( <p>In this internship I am currently working as a front end developer.I have completed Self Assessment Screens and integrated with <b> Api.</b> <br/> I also used <b>Redux</b> in the website. I made responsive designs using <b>Tailwind CSS</b></p>),
+     description:( <p>In this internship I am currently working as a front end developer.<br/>I have completed Self Assessment Screens and Mock Test Screen and then integrated with <b> Api.</b> <br/> I also used <b>Redux</b> in the website. I made responsive designs using <b>Tailwind CSS</b></p>),
   },
   {
     name:"Evaluate Health",

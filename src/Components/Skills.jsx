@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
 import { Fade } from "react-reveal";
 
@@ -34,6 +34,7 @@ function Skills() {
                 //  </div>
                 <div key={index} className="cursor-pointer">
                   <SkillCircle
+               
                     openTxt={data.name}
                     closedTxt={data.percentage}
                   />
@@ -52,12 +53,28 @@ function Skills() {
 
 function SkillCircle({ openTxt, closedTxt }) {
   const [rotate, setRotate] = useState(true);
+  const [displayedPercent, setDisplayedPercent] = useState(0);
+
+  useEffect(() => {
+
+      let currentPercent = 0;
+      const interval = setInterval(() => {
+        currentPercent += 1; 
+        setDisplayedPercent(Math.min(currentPercent, closedTxt));
+        if (currentPercent >= closedTxt) {
+          clearInterval(interval);
+        }
+      }, 20);
+      return () => clearInterval(interval);
+    
+  }, [rotate]);
   return (
     <div className=" self-center cursor-pointer flip-card">
       <div
         onClick={() => {
           setRotate(!rotate);
         }}
+       
         className={
           !rotate ? "flip-card-inner flip-card-rotate" : "flip-card-inner"
         }
@@ -82,7 +99,7 @@ function SkillCircle({ openTxt, closedTxt }) {
             {/* <p className="text-center font-semibold text-lg text-white">
               {closedTxt}
             </p> */}
-            <CircularProgress value={closedTxt} />
+            <CircularProgress value={displayedPercent}  />
           </div>
         </div>
       </div>
@@ -90,7 +107,9 @@ function SkillCircle({ openTxt, closedTxt }) {
   );
 }
 
-const CircularProgress = ({ value }) => {
+const CircularProgress = ({ value  }) => {
+  
+
   return (
     <div  className="w-[100px] lg:w-[140px] aspect-square relative" >
       <CircularProgressbar
