@@ -1,9 +1,13 @@
 import React from 'react'
+import { useSelector } from 'react-redux';
 import { Fade } from 'react-reveal';
+import GetColor from '../GetColor';
 
 
 function Profiles() {
  
+  
+  const Color= GetColor(useSelector(state=>state.theme));
     const ProfilesData=[
     {
       name:"Codechef",
@@ -52,7 +56,7 @@ function Profiles() {
         <p className="text-[35px] my-10 md:text-[40px] font-bold  ">
           Profiles
         </p>
-        <div className="border-gray-300 w-[90vw] bg-gray-900  shadow-black shadow-2xl border border-l-2 rounded-lg  p-10 pt-5 items-center justify-center flex">
+        <div className={`${Color.border_color1} w-[90vw] ${Color.card_bg_color} ${Color.shadow_color} shadow-2xl border border-l-2 rounded-lg  p-10 pt-5 items-center justify-center flex`}>
           <Fade left duration={2500}>
           <div className="overflow-auto no-scrollbar flex flex-row py-10">
             {
@@ -73,6 +77,9 @@ function Profiles() {
   }
   
   function Card({data}){
+    
+  const Color= GetColor(useSelector(state=>state.theme));
+
     return(
       <div className="border w-[350px]   font-semibold text-lg mx-5 rounded-2xl p-7 flex flex-col items-center gap-4">
           <img src={data.pic} className="w-[350px] aspect-video rounded-xl object-contain object-center">
@@ -84,7 +91,7 @@ function Profiles() {
           {data.description}
           </div>
 
-          <div  className="px-6 py-2 bg-slate-600 text-center rounded-xl">
+          <div  className={`px-6 py-2 ${Color.background_color} text-center rounded-xl`}>
             <a href={data.link}>View</a>
           </div>
       </div>

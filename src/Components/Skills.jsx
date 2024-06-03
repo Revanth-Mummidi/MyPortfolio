@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
 import { Fade } from "react-reveal";
+import GetColor from "../GetColor";
+import { useSelector } from "react-redux";
 
 function Skills() {
   const skills = [
@@ -14,6 +16,8 @@ function Skills() {
     { name: "DSA", percentage: 85 },
   ];
   const val = 66;
+  
+  const Color=GetColor(useSelector(state=>state.theme));
   return (
     <section
       id="skills"
@@ -23,7 +27,7 @@ function Skills() {
         Skills
       </p>
 
-      <div className="border-gray-300 w-[90vw] bg-gray-900 shadow-black shadow-2xl border border-l-2 rounded-lg   items-center justify-center flex">
+      <div className={`${Color.border_color1} w-[90vw] ${Color.card_bg_color} ${Color.shadow_color} shadow-2xl border border-l-2 rounded-lg   items-center justify-center flex`}>
         {/* <LeftContent/> */}
         <div className="sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-20 py-10 gap-x-6 gap-y-2 items-center justify-center">
           <Fade bottom duration={1500}>
@@ -54,6 +58,8 @@ function Skills() {
 function SkillCircle({ openTxt, closedTxt }) {
   const [rotate, setRotate] = useState(true);
   const [displayedPercent, setDisplayedPercent] = useState(0);
+  
+  const Color=GetColor(useSelector(state=>state.theme));
 
   useEffect(() => {
 
@@ -81,7 +87,7 @@ function SkillCircle({ openTxt, closedTxt }) {
       >
         <div
           className={
-            "bg-gradient-to-bl flip-card-front mt-0 shadow-2xl shadow-black  from-slate-700 via-slate-600 via-slate-600 to-slate-900 p-4 rounded-full w-[100px] lg:w-[140px] aspect-square my-5 mx-5   justify-center items-center transition-transform delay-700"
+            `bg-gradient-to-bl flip-card-front mt-0 shadow-2xl ${Color.shadow_color} ${Color.gradient_colors1} p-4 rounded-full w-[100px] lg:w-[140px] aspect-square my-5 mx-5   justify-center items-center transition-transform delay-700`
           }
         >
           <div className="w-full h-full relative flex flex-col items-center justify-center ">
@@ -92,7 +98,7 @@ function SkillCircle({ openTxt, closedTxt }) {
         </div>
         <div
           className={
-            "bg-gradient-to-bl flip-card-back  shadow-2xl shadow-black  from-slate-300 via-slate-200 via-slate-500 to-slate-600  rounded-full  my-5 mx-5   justify-center items-center transition-transform delay-700"
+            `bg-gradient-to-bl flip-card-back  shadow-2xl ${Color.shadow_color} ${Color.gradient_colors2} rounded-full  my-5 mx-5   justify-center items-center transition-transform delay-700`
           }
         >
           <div className="w-full  h-full relative flex flex-col items-center justify-center">
@@ -108,7 +114,7 @@ function SkillCircle({ openTxt, closedTxt }) {
 }
 
 const CircularProgress = ({ value  }) => {
-  
+  const Color=GetColor(useSelector(state=>state.theme));
 
   return (
     <div  className="w-[100px] lg:w-[140px] aspect-square relative" >
@@ -134,7 +140,7 @@ const CircularProgress = ({ value  }) => {
           fontWeight: "bold",
         }}
       >
-        <p className="text-center font-bold text-lg text-gray-200">
+        <p className={`text-center font-bold text-lg ${Color.progressbar} `}>
           {`${value}%`}
         </p>
       </div>

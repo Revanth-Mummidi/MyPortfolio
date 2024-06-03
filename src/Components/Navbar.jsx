@@ -17,7 +17,11 @@ function Navbar() {
     { name: "Contact", path: "#contact" },
   ];
   return (
-    <div className={`fixed flex flex-row  shadow-2xl ${Color.shadow_light_color} ${Color.navbar_bg_color}  items-center py-4 px-[4vw] w-full  z-10 `}>
+    <div className={`fixed flex flex-row  shadow-2xl 
+    backdrop-blur-2xl
+   
+    ${Color.shadow_light_color} ${Color.navbar_bg_color}
+      items-center py-4 px-[4vw] w-full  z-10 `}>
       {/* <video
         autoPlay
         loop
@@ -27,14 +31,14 @@ function Navbar() {
         <source src={BgVideo} type="video/mp4" />
         
       </video> */}
-      <div className="self-start flex ">
+      <div className="self-start flex blur-0 ">
         <a href="#homepage" className="md:text-2xl cursor-pointer text-lg  font-bold">Revanth</a>
       </div>
-      <div className="hidden lg:flex flex-row flex-1 items-center justify-end ">
+      <div className="hidden lg:flex flex-row flex-1 blur-0 items-center justify-end ">
         {options.map((item, index) => {
           return (
             <div key={index} className="mx-10 w-[50px] items-center flex justify-center">
-              <a href={item.path} className={` font-semibold hover:underline hover:underline-offset-4  hover:${Color.hover_text_color} hover:text-lg`}>{item.name}</a>
+              <a href={item.path} className={` font-semibold hover:underline hover:underline-offset-4  ${Color.hover_text_color} hover:text-lg`}>{item.name}</a>
             </div>
           );
         })}
@@ -68,7 +72,7 @@ function SideNavBar({ options , setSideNav}) {
           {options.map((item, index) => {
             return (
               <div key={index} className="my-5 h-[50px] items-center opacity-100 flex cursor-pointer justify-center">
-                <a href={item.path} className={`font-semibold text-start text-base md:text-lg hover:underline hover:underline-offset-4  hover:${Color.hover_text_color} `}>{item.name}</a>
+                <a href={item.path} className={`font-semibold text-start text-base md:text-lg hover:underline hover:underline-offset-4  ${Color.hover_text_color} `}>{item.name}</a>
               </div>
             );
           })}

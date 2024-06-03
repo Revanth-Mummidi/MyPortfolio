@@ -1,9 +1,12 @@
 
 import React, { useState } from "react";
 import { Fade } from "react-reveal";
+import GetColor from "../GetColor";
+import { useSelector } from "react-redux";
 
 function Projects() {
  
+  const Color= GetColor(useSelector(state=>state.theme));
   const ProjectsData=[
   {
     name:"Fit Foods",
@@ -16,7 +19,7 @@ function Projects() {
     name:"Craft Sale",
     tech:"React JS , Tailwind CSS , Mongo DB , NodeJs , ExpressJs",
     github:"https://github.com/Revanth-Mummidi/client",
-    preview:"",
+    preview:"https://craftsale.vercel.app/",
     description:"It is an Ecommerce Website in which user can buy or sell the hand made crafts.I followed micro service architecture for the backend and in front end I used React Js along with Tailwind CSS."
   },
   {
@@ -36,7 +39,7 @@ function Projects() {
       <p className="text-[35px] my-10 md:text-[40px] font-bold  ">
         Projects
       </p>
-      <div className="border-gray-300 bg-gray-900 w-[90vw] shadow-black shadow-2xl border border-l-2 rounded-lg   items-center justify-center flex">
+      <div className={`${Color.border_color1} ${Color.card_bg_color} w-[90vw] ${Color.shadow_color} shadow-2xl border border-l-2 rounded-lg   items-center justify-center flex`}>
         <div className="sm:grid sm:grid-cols-1 md:grid-cols-1 xl:grid-cols-2 px-5 md:px-10 py-10 gap-x-12 gap-y-2 items-center justify-center">
         <Fade left duration={1500}>
           {
@@ -58,6 +61,8 @@ function Projects() {
 
 const Card = ({data}) => {
   const [rotate, setRotate] = useState(true);
+  
+  const Color= GetColor(useSelector(state=>state.theme));
   return (
     <div className="flip-card cursor-pointer mx-auto my-8">
     
@@ -70,11 +75,11 @@ const Card = ({data}) => {
           !rotate ? "flip-card-inner flip-card-rotate" : "flip-card-inner"
         }
         >
-        <div  className="lg:w-[520px] flex flex-row justify-center items-center xl:w-[500px] sm:w-[400px] w-[280px]  shadow-2xl shadow-black flip-card-front aspect-video right-0 border-slate-700 bg-gradient-to-l from-slate-700 via-slate-600 via-slate-600 to-slate-900   border  rounded-xl " >
+        <div  className={`lg:w-[520px] flex flex-row justify-center items-center xl:w-[500px] sm:w-[400px] w-[280px]  shadow-2xl ${Color.shadow_color} flip-card-front aspect-video right-0 ${Color.border_color1} bg-gradient-to-l ${Color.gradient_colors1}  border  rounded-xl `}>
           {/* <FrontCard data={data} /> */}
           <p className="text-[40px] lg:text-[60px] font-bold ">{data.name}</p>
         </div>
-        <div className="lg:w-[520px] xl:w-[500px]  sm:w-[400px] w-[280px] shadow-2xl shadow-black blur-0 flip-card-back aspect-video right-0 border-slate-800 border  bg-slate-700 rounded-xl ">
+        <div className={`lg:w-[520px] xl:w-[500px]  sm:w-[400px] w-[280px] shadow-2xl ${Color.shadow_color} blur-0 flip-card-back aspect-video right-0 ${Color.border_color2} border ${Color.background_color} rounded-xl `}>
           <BackCard data={data} />
         </div>
       </div>

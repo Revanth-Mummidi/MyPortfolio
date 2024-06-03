@@ -1,10 +1,14 @@
 import React from 'react'
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
+import GetColor from '../GetColor';
+import { useSelector } from 'react-redux';
 
 function Contact() {
+   
+  const Color= GetColor(useSelector(state=>state.theme));
   return (
-   <section id="contact" className='w-[100vw] bg-slate-950 '>
+   <section id="contact" className={`w-[100vw] ${Color.navbar_bg_color} `}>
       <div className='flex flex-col items-center justify-start p-10'>
           <p className=' text-[30px] md:text-[40px] font-bold mb-10'>Contact Me</p>
           <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 font-semibold mx-10  gap-x-10 gap-y-10 my-10'>
@@ -24,11 +28,11 @@ function Contact() {
           </div>
           <div className='flex flex-row justify-center items-center gap-10 my-10 '>
              <a href='https://github.com/Revanth-Mummidi'>
-                <FaGithub className='h-[60px] w-[60px]  hover:text-slate-500 font-bold'/>
+                <FaGithub className={`h-[60px] w-[60px]  ${Color.hover_text_color} font-bold`}/>
                </a>
                <a href='https://www.linkedin.com/in/revanth-mummidi-a14a98254/'>
 
-              <FaLinkedin className='h-[60px] w-[60px]  hover:text-slate-500 font-bold'/>
+              <FaLinkedin className={`h-[60px] w-[60px] ${Color.hover_text_color} font-bold`}/>
                </a>
           </div>
           <p className='font-semibold mt-5'>©️ 2024 Mummidi Revanth Portfolio. All rights reserved</p>

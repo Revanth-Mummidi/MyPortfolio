@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "./Components/Navbar";
 import HomePage from "./Components/HomePage";
 import Skills from "./Components/Skills";
@@ -11,18 +11,24 @@ import { Fade } from "react-reveal";
 import AnimatedCursor from "react-animated-cursor";
 
 import BgVideo from "./Assets/mixkit-night-sky-covered-with-stars-39768-hd-ready.mp4"
-import {  useSelector } from "react-redux";
+import {  useDispatch, useSelector } from "react-redux";
 
 
 import GetColor from "./GetColor";
+import { setTheme } from "./Redux/ThemeSlice";
 
 function App() {
+  const {theme} =useSelector(state=>state.theme);
   const Color = GetColor(useSelector(state=>state.theme));
+  const dispatch=useDispatch();
+  useEffect(()=>{
+  dispatch(setTheme("Dark"));
+  },[]);
   return (
    
 
   
-    <div className={`overflow-y-auto gap-0 ${Color.background_color} ${Color.text_color}  relative no-scrollbar `}>
+    <div className={` relative overflow-y-auto gap-0 ${Color.background_color} ${Color.text_color} w-full overflow-x-hidden  relative no-scrollbar `}>
        {/* <video
         autoPlay
         loop
@@ -60,6 +66,14 @@ function App() {
         <Profiles />
       </Fade>
       <Contact />
+      {/* <div onClick={()=>{
+        if(theme!="Dark")
+        dispatch(setTheme("Dark"));
+        else
+        dispatch(setTheme("Light"));
+      }} className={`fixed top-36 right-10 ${Color.navbar_bg_color}  text-white rounded-full p-5 `}>
+         <p>{theme}</p>
+      </div> */}
     </div>
 
   );

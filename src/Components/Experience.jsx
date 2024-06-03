@@ -5,8 +5,11 @@ import HackerEarth from "../Assets/HE_identity.png";
 import React, { useState } from "react";
 import { Fade } from "react-reveal";
 import BgVideo from "../Assets/mixkit-night-sky-covered-with-stars-39768-hd-ready.mp4";
+import GetColor from "../GetColor";
+import { useSelector } from "react-redux";
 
 function Experience() {
+  const Color= GetColor(useSelector(state=>state.theme));
  
   const ExperienceData=[
   {
@@ -52,7 +55,7 @@ const VolunteerExperienceData=[
       <p className="text-[35px] my-10 md:text-[40px] font-bold  ">
         Experience
       </p>
-      <div className="border-gray-300 w-[90vw] bg-gray-900 shadow-black shadow-2xl border border-l-2 rounded-lg   items-center justify-center flex flex-col">
+      <div className={`${Color.border_color1} w-[90vw] ${Color.card_bg_color} ${Color.shadow_color} shadow-2xl border border-l-2 rounded-lg   items-center justify-center flex flex-col`}>
      
      
         <p className=" text-3xl mt-10 font-semibold">Intern Experience</p>
@@ -67,7 +70,7 @@ const VolunteerExperienceData=[
           }    
           </Fade>      
         </div>
-       <div className="flex flex-row w-full border border-white">
+       <div className={`flex flex-row w-full border ${Color.border_white}`}>
 
        </div>
         <p className=" text-3xl mt-10 font-semibold">Volunteer Experience</p>
@@ -93,6 +96,9 @@ const VolunteerExperienceData=[
 
 const Card = ({data}) => {
   const [rotate, setRotate] = useState(true);
+  
+  const Color= GetColor(useSelector(state=>state.theme));
+  
   return (
      
     <div className="flip-card cursor-pointer mx-auto my-8">
@@ -105,10 +111,10 @@ const Card = ({data}) => {
         }
       >
 
-        <div className="lg:w-[520px] xl:w-[500px]  sm:w-[400px]  w-[280px] shadow-2xl shadow-black flip-card-front aspect-video right-0 border-slate-800  border bg-gradient-to-l from-slate-700 via-slate-600 via-slate-600 to-slate-900 rounded-xl ">
+        <div className={`lg:w-[520px] xl:w-[500px]  sm:w-[400px]  w-[280px] shadow-2xl ${Color.shadow_color} flip-card-front aspect-video right-0 ${Color.border_color2}  border bg-gradient-to-l ${Color.gradient_colors1} rounded-xl `}>
           <FrontCard data={data} />
         </div>
-        <div className="lg:w-[520px] xl:w-[500px]  sm:w-[400px] w-[280px] shadow-2xl shadow-black flip-card-back aspect-video right-0 border-slate-800 border  bg-slate-700 rounded-xl ">
+        <div className={`lg:w-[520px] xl:w-[500px]  sm:w-[400px] w-[280px] shadow-2xl ${Color.shadow_color} flip-card-back aspect-video right-0 ${Color.border_color2} border  ${Color.background_color} rounded-xl `}>
           <BackCard data={data} />
         </div>
       </div>
