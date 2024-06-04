@@ -24,11 +24,18 @@ function Projects() {
   },
   {
     name:"Insta Clone",
-    tech:"React Native",
+    tech:"React Native, CSS",
     github:"https://github.com/Revanth-Mummidi/insta",
     preview:"",
     description:"It is a replicate of Instagram Social Media App. I built Instagram Clone using React Native in which I made Profile and Home Screens which contains Posts,Stories and Highlights"
-  }
+  },
+  {
+    name:"Portfolio",
+    tech:"React JS , Tailwind CSS",
+    github:"https://github.com/Revanth-Mummidi/MyPortfolio",
+    preview:"https://my-portfolio-git-master-revanthmummidis-projects.vercel.app/",
+    description:"Welcome to my portfolio website, crafted with precision and creativity using React JS and Tailwind CSS. This site showcases my projects and skills with a focus on dynamic animations and a responsive design that ensures a seamless experience across all devices. Explore my work and see how I bring ideas to life with cutting-edge web technologies.",
+  },
 ]
 
   return (
@@ -98,7 +105,7 @@ const BackCard = ({data}) => {
       </div>
       <hr className="my-3"></hr>
       <div className=" flex flex-row  items-center gap-5">
-        <p className="font-semibold  text-sm md:text-lg">Frameworks :</p>
+        <p className="font-semibold  text-sm md:text-lg">Technologies :</p>
         <p className="text-sm md:text-lg flex flex-1 flex-row justify-end">{data.tech}</p>
         </div>
         <div className=" flex flex-row  items-center gap-5">
