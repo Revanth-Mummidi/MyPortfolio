@@ -22,7 +22,7 @@ function App() {
   const Color = GetColor(useSelector(state=>state.theme));
   const dispatch=useDispatch();
   useEffect(()=>{
-  dispatch(setTheme("Dark"));
+  dispatch(setTheme("Light"));
   },[]);
   return (
    
@@ -66,14 +66,14 @@ function App() {
         <Profiles />
       </Fade>
       <Contact />
-      {/* <div onClick={()=>{
+      <div onClick={()=>{
         if(theme!="Dark")
         dispatch(setTheme("Dark"));
         else
         dispatch(setTheme("Light"));
-      }} className={`fixed top-36 right-10 ${Color.navbar_bg_color}  text-white rounded-full p-5 `}>
+      }} className={`fixed top-36 right-10 ${Color.navbar_bg_color} shadow-md ${Color.shadow_color} ${Color.border_color1} w-[83px] aspect-video flex items-center justify-center border text-white rounded-full p-5 `}>
          <p>{theme}</p>
-      </div> */}
+      </div>
     </div>
 
   );

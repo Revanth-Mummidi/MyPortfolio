@@ -49,13 +49,13 @@ const VolunteerExperienceData=[
   return (
     <section
       id="experience"
-      className=" w-[100vw] relative  flex flex-col items-center justify-center p-10"
+      className={` ${Color.text_color1} w-[100vw] relative  flex flex-col items-center justify-center p-10`}
     >
 
       <p className="text-[35px] my-10 md:text-[40px] font-bold  ">
         Experience
       </p>
-      <div className={`${Color.border_color1} w-[90vw] ${Color.card_bg_color} ${Color.shadow_color} shadow-2xl border border-l-2 rounded-lg   items-center justify-center flex flex-col`}>
+      <div className={`${Color.border_color1} ${Color.text_color} w-[90vw] ${Color.card_bg_color} ${Color.shadow_color} shadow-2xl border border-l-2 rounded-lg   items-center justify-center flex flex-col`}>
      
      
         <p className=" text-3xl mt-10 font-semibold">Intern Experience</p>
@@ -160,14 +160,15 @@ const FrontCard = ({data}) => {
   );
 };
 const BackCard = ({data}) => {
+  const Color = GetColor(useSelector(state=>state.theme));
   return (
-    <div className="p-4 cursor-pointer w-full h-[270px] lg:h-full overflow-y-auto no-scrollbar flex ">
+    <div className={`${Color.text_color1}  p-4 cursor-pointer w-full h-[270px] lg:h-full overflow-y-auto no-scrollbar flex `}>
     <div className="w-full h-full flex flex-col">
       <div className="flex flex-row justify-center items-center">
         
         <p className="font-semibold text-lg md:text-2xl">Description</p>
       </div>
-      <hr className="my-3"></hr>
+      <hr className="my-3 text-black "></hr>
       <div className="flex flex-col  font-normal justify-start flex-1 pb-2 ">
          {data.description}
       </div>

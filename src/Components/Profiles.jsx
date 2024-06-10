@@ -53,7 +53,7 @@ function Profiles() {
         id="profiles"
         className=" w-[100vw]  flex flex-col  items-center justify-center p-10 mb-20 "
       >
-        <p className="text-[35px] my-10 md:text-[40px] font-bold  ">
+        <p className={` ${Color.text_color1} text-[35px] my-10 md:text-[40px] font-bold  `}>
           Profiles
         </p>
         <div className={`${Color.border_color1} w-[90vw] ${Color.card_bg_color} ${Color.shadow_color} shadow-2xl border border-l-2 rounded-lg  p-10 pt-5 items-center justify-center flex`}>
@@ -91,7 +91,7 @@ function Profiles() {
           {data.description}
           </div>
 
-          <div  className={`px-6 py-2 ${Color.background_color} text-center rounded-xl`}>
+          <div  className={`px-6 py-2 ${Color.background_color}  ${Color.text_color1} text-center rounded-xl`}>
             <a href={data.link}>View</a>
           </div>
       </div>

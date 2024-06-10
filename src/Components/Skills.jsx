@@ -21,7 +21,7 @@ function Skills() {
   return (
     <section
       id="skills"
-      className=" w-[100vw] md:mt-0 flex flex-col items-center justify-center p-10"
+      className={` ${Color.text_color1} w-[100vw] md:mt-0 flex  flex-col items-center justify-center p-10`}
     >
       <p className="text-[35px] my-10 md:text-[40px] font-bold ">
         Skills
@@ -29,7 +29,7 @@ function Skills() {
 
       <div className={`${Color.border_color1} w-[90vw] ${Color.card_bg_color} ${Color.shadow_color} shadow-2xl border border-l-2 rounded-lg   items-center justify-center flex`}>
         {/* <LeftContent/> */}
-        <div className="sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-20 py-10 gap-x-6 gap-y-2 items-center justify-center">
+        <div className={` ${Color.text_color} sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-20 py-10 gap-x-6 gap-y-2 items-center justify-center`}>
           <Fade bottom duration={1500}>
             {skills.map((data, index) => {
               return (
@@ -125,7 +125,7 @@ const CircularProgress = ({ value  }) => {
         styles={buildStyles({
           backgroundColor: "transparent",
           textColor: "rgb(51 65 85 / var(--tw-bg-opacity))",
-          pathColor: "rgb(229 231 235  / var(--tw-bg-opacity))",
+          pathColor: Color.progressbar,
           trailColor: "transparent",
           textSize: "20px",
         })}
@@ -140,7 +140,7 @@ const CircularProgress = ({ value  }) => {
           fontWeight: "bold",
         }}
       >
-        <p className={`text-center font-bold text-lg ${Color.progressbar} `}>
+        <p className={`text-center font-bold text-lg text-[${Color.progressbar}] `}>
           {`${value}%`}
         </p>
       </div>

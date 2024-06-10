@@ -27,7 +27,7 @@ function HomePage() {
     >
       <Fade bottom duration={1500} distance="120px">
         <div className="grid  grid-cols-1 md:grid-cols-2 h-full w-full ">
-          <div className="flex flex-1 flex-row items-center justify-center">
+          <div className={`${Color.text_color1} flex flex-1 flex-row items-center justify-center`}>
             <div className="flex  relative flex-col gap-5">
               <div className="mb-10 md:mb-0">
                 <LeftContent />
@@ -36,7 +36,7 @@ function HomePage() {
                 </p>
               </div>
               <div className="absolute hidden md:block -top-10 -right-28 lg:-right-28 ">
-                <div className="flex flex-col gap-5 ">
+                <div className={`${Color.text_color1} flex flex-col gap-5 `}>
                   <p className="font-semibold text-2xl md:text-3xl text-center">
                     Click here
                   </p>
@@ -49,12 +49,12 @@ function HomePage() {
             </div>
           </div>
           <div className="flex flex-1 flex-col items-center justify-center  text-center md:text-start">
-            <div className="flex flex-col gap-3 lg:gap-6">
+            <div className={`${Color.text_color1} flex flex-col gap-3 lg:gap-6`}>
               <p className="font-sans font-semibold  text-[30px]  lg:text-[40px]">
                 Hello , I'm{" "}
               </p>
               <p
-                className={`font-sans font-semibold text-[40px]  lg:text-[50px] ${Color.name_color}`}
+                className={`font-sans font-semibold text-[40px]  lg:text-[50px] ${Color.name_color} inline-block text-transparent bg-clip-text bg-gradient-to-r`}
               >
                 Revanth Mummidi
               </p>
@@ -74,7 +74,7 @@ function HomePage() {
                 repeat={Infinity}
               />
               {/* <p className='font-sans font-semibold mt-3 text-[20px] lg:text-[30px] '>{Abilities[idx]}</p> */}
-              <div className="flex flex-row mt-5 gap-5 justify-center md:justify-start items-center  ">
+              <div className={`${Color.text_color} flex  flex-row mt-5 gap-5 justify-center md:justify-start items-center  `}>
                 <a href={"mailto:mummidirevanth@gmail.com"}>
                   <CustomButton content={"Hire Me"} />
                 </a>
@@ -93,7 +93,7 @@ function LeftContent() {
   const Color = GetColor(useSelector((state) => state.theme));
   const [rotate, setRotate] = useState(true);
   return (
-    <div className=" self-center cursor-pointer flip-card hover:animate-pulse mb-10">
+    <div className={` ${Color.text_color} self-center cursor-pointer flip-card hover:animate-pulse mb-10`}>
       <div
         onClick={() => {
           setRotate(!rotate);

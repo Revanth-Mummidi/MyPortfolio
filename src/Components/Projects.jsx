@@ -41,7 +41,7 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="w-[100vw] flex flex-col items-center justify-center p-10"
+      className={`${Color.text_color1} w-[100vw] flex flex-col items-center justify-center p-10`}
     >
       <p className="text-[35px] my-10 md:text-[40px] font-bold  ">
         Projects
@@ -82,7 +82,7 @@ const Card = ({data}) => {
           !rotate ? "flip-card-inner flip-card-rotate" : "flip-card-inner"
         }
         >
-        <div  className={`lg:w-[520px] flex flex-row justify-center items-center xl:w-[500px] sm:w-[400px] w-[280px]  shadow-2xl ${Color.shadow_color} flip-card-front aspect-video right-0 ${Color.border_color1} bg-gradient-to-l ${Color.gradient_colors1}  border  rounded-xl `}>
+        <div  className={`lg:w-[520px] flex ${Color.text_color} flex-row justify-center items-center xl:w-[500px] sm:w-[400px] w-[280px]  shadow-2xl ${Color.shadow_color} flip-card-front aspect-video right-0 ${Color.border_color1} bg-gradient-to-l ${Color.gradient_colors1}  border  rounded-xl `}>
           {/* <FrontCard data={data} /> */}
           <p className="text-[40px] lg:text-[60px] font-bold ">{data.name}</p>
         </div>
