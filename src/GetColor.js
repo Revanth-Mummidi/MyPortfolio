@@ -23,10 +23,10 @@ const DarkThemeColors={
 const LightThemeColors={
     background_color:"bg-[#b5d7f5]",
     navbar_bg_color:"bg-[#00215E]",
-    small_navbar_bg_color:"bg-slate-500",
+    small_navbar_bg_color:"bg-[#b5d7f5]",
     text_color:"text-[#f7f8fa]",
-    text_color1:"text-[#071023]",
-    hover_text_color:"hover:text-slate-700",
+    text_color1:"text-[#153883]",
+    hover_text_color:"hover:text-[#b5d7f5]",
     progressbar:"#00215E",
     card_bg_color:"bg-[#00215E]",
     contact_bg_color:"bg-slate-950",

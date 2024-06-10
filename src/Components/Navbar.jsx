@@ -32,7 +32,7 @@ function Navbar() {
         
       </video> */}
       <div className="self-start flex blur-0 ">
-        <a href="#homepage" className="md:text-2xl cursor-pointer text-lg  font-bold">Revanth</a>
+        <a href="#homepage" className={` md:text-2xl cursor-pointer text-lg  font-bold ${Color.hover_text_color}  `}>Revanth</a>
       </div>
       <div className="hidden lg:flex flex-row flex-1 blur-0 items-center justify-end ">
         {options.map((item, index) => {
@@ -65,8 +65,8 @@ function SideNavBar({ options , setSideNav}) {
     <div className="absolute lg:hidden right-0 top-0 ">
       <div className="relative flex flex-col   h-screen   items-center ">
         <div className={`lex-row justify-between items-center py-5  px-10   ${Color.small_navbar_bg_color}  flex w-full`}>
-          <a href="#homepage" className="md:text-2xl cursor-pointer text-lg  mr-7  font-bold">Revanth</a>
-          <IoClose className=" md:text-2xl text-lg font-bold" onClick={()=>{setSideNav(false)}} />
+          <a href="#homepage" className={` ${Color.text_color1} md:text-2xl cursor-pointer text-lg  mr-7 ${Color.hover_text_color}  font-bold`}>Revanth</a>
+          <IoClose className={` md:text-2xl text-lg font-bold ${Color.text_color1}`} onClick={()=>{setSideNav(false)}} />
         </div>
         <div className={`flex flex-col py-7 px-20 flex-1 items-start opacity ${Color.navbar_bg_color} opacity-[0.95] `}>
           {options.map((item, index) => {
