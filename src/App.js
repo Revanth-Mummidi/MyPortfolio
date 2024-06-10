@@ -22,7 +22,7 @@ function App() {
   const Color = GetColor(useSelector(state=>state.theme));
   const dispatch=useDispatch();
   useEffect(()=>{
-  dispatch(setTheme("Light"));
+  dispatch(setTheme("Dark"));
   },[]);
   return (
    
