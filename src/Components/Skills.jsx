@@ -140,7 +140,7 @@ const CircularProgress = ({ value  }) => {
           fontWeight: "bold",
         }}
       >
-        <p className={`text-center font-bold text-lg text-[${Color.progressbar}] `}>
+        <p style={{color:Color.progressbar}} className={`text-center font-bold text-lg  `}>
           {`${value}%`}
         </p>
       </div>
