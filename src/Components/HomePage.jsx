@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ProfilePic from "../Assets/ProfilePic-photoaidcom-cropped.jpg";
+import ProfilePic from "../Assets/ProfilePic-photoaidcom-cropped-removebg-preview.png";
 import { Fade } from "react-reveal";
 import Arrow from "../Assets/toppng.com-arrow-pointing-to-left-comments-curved-arrow-vector-980x858.png";
 import { TypeAnimation } from "react-type-animation";
