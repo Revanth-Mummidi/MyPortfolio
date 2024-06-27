@@ -38,8 +38,9 @@ function App() {
         <source src={BgVideo} type="video/mp4" />
         
       </video> */}
-      <div className="cursor__dot">
+      <div className="cursor__dot hidden lg:block">
         <AnimatedCursor
+         
           innerSize={15}
           outerSize={15}
           color="255, 255 ,255"
