@@ -28,7 +28,7 @@ function App() {
    
 
   
-    <div className={` relative overflow-y-auto gap-0 ${Color.background_color} ${Color.text_color} w-full overflow-x-hidden  relative no-scrollbar `}>
+    <div  className={` relative overflow-y-auto gap-0 ${Color.background_color} ${Color.text_color} w-full overflow-x-hidden  relative no-scrollbar `}>
        {/* <video
         autoPlay
         loop
@@ -71,7 +71,7 @@ function App() {
         dispatch(setTheme("Dark"));
         else
         dispatch(setTheme("Light"));
-      }} className={`fixed top-36 right-10 hover:opacity-40 ${Color.navbar_bg_color} shadow-md ${Color.shadow_color} ${Color.border_color1} w-[73px] aspect-square flex items-center justify-center border text-white rounded-full p-5 `}>
+      }} className={`fixed top-36 right-10 hover:opacity-40  opacity-70 ${Color.navbar_bg_color} shadow-md ${Color.shadow_color} ${Color.border_color1} w-[73px] aspect-square flex items-center justify-center border text-white rounded-full p-5 `}>
          <p>{theme}</p>
       </div>
     </div>

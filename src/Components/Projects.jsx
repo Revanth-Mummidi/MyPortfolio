@@ -34,7 +34,7 @@ function Projects() {
     tech:"React JS , Tailwind CSS",
     github:"https://github.com/Revanth-Mummidi/MyPortfolio",
     preview:"https://my-portfolio-git-master-revanthmummidis-projects.vercel.app/",
-    description:"Welcome to my portfolio website, crafted with precision and creativity using React JS and Tailwind CSS. This site showcases my projects and skills with a focus on dynamic animations and a responsive design that ensures a seamless experience across all devices. Explore my work and see how I bring ideas to life with cutting-edge web technologies.",
+    description:"Welcome to my portfolio website, made using React JS and Tailwind CSS. This site showcases my projects and skills with a focus on dynamic animations and a responsive design that ensures a seamless experience across all devices. Also added themes with redux.",
   },
 ]
 
@@ -82,11 +82,11 @@ const Card = ({data}) => {
           !rotate ? "flip-card-inner flip-card-rotate" : "flip-card-inner"
         }
         >
-        <div  className={`lg:w-[520px] flex ${Color.text_color} flex-row justify-center items-center xl:w-[500px] sm:w-[400px] w-[280px]  shadow-2xl ${Color.shadow_color} flip-card-front aspect-video right-0 ${Color.border_color1} bg-gradient-to-l ${Color.gradient_colors1}  border  rounded-xl `}>
+        <div  className={`lg:w-[520px] flex ${Color.text_color} flex-row justify-center items-center xl:w-[500px] sm:w-[400px] w-[280px] lg:h-[400px]  shadow-2xl ${Color.shadow_color} flip-card-front aspect-video right-0 ${Color.border_color1} bg-gradient-to-l ${Color.gradient_colors1}  border  rounded-xl `}>
           {/* <FrontCard data={data} /> */}
           <p className="text-[40px] lg:text-[60px] font-bold ">{data.name}</p>
         </div>
-        <div className={`lg:w-[520px] xl:w-[500px]  sm:w-[400px] w-[280px] shadow-2xl ${Color.shadow_color} blur-0 flip-card-back aspect-video right-0 ${Color.border_color2} border ${Color.background_color} rounded-xl `}>
+        <div className={`lg:w-[520px] xl:w-[500px]  sm:w-[400px] w-[280px] shadow-2xl ${Color.shadow_color} blur-0 flip-card-back aspect-video lg:h-[400px] right-0 ${Color.border_color2} border ${Color.background_color} rounded-xl `}>
           <BackCard data={data} />
         </div>
       </div>
@@ -97,7 +97,7 @@ const Card = ({data}) => {
 
 const BackCard = ({data}) => {
   return (
-    <div className="p-4 w-full h-full overflow-y-auto no-scrollbar ">
+    <div className="p-4 w-full h-full overflow-y-scroll no-scrollbar ">
     <div className="w-full h-full flex flex-col">
       <div className="flex flex-row justify-center items-center">
         
