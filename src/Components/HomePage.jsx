@@ -105,7 +105,7 @@ function LeftContent() {
       >
         <img
           src={ProfilePic}
-          className={`bg-gradient-to-bl flip-card-front shadow-2xl ${Color.shadow_color}  rounded-full w-[300px] lg:w-[400px] aspect-square mx-auto  justify-center items-center transition-transform delay-700`}
+          className={`bg-gradient-to-bl flip-card-front shadow-2xl ${Color.shadow_color} ${Color.gradient_colors1}  rounded-full w-[300px] lg:w-[400px] aspect-square mx-auto  justify-center items-center transition-transform delay-700`}
         ></img>
         <div
           className={` flip-card-back  shadow-2xl ${Color.shadow_color}  bg-gradient-to-bl ${Color.gradient_colors1} p-10 rounded-full w-[300px] lg:w-[400px] aspect-square mx-auto  justify-center items-center transition-transform delay-700`}
