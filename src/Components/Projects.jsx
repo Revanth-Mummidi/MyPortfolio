@@ -10,14 +10,14 @@ function Projects() {
   const ProjectsData=[
   {
     name:"Fit Foods",
-    tech:"React JS , Tailwind CSS",
+    tech:"React JS , Tailwind CSS , Mongo DB , NodeJs , ExpressJs",
     github:"https://github.com/Revanth-Mummidi/Fit_Foods",
-    preview:"https://fit-foods.vercel.app/",
+    preview:"https://fit-foods.onrender.com/",
     description:"It is website which helps users to give personalized food choices according to their health issues and allergies.It helps users to identify the foods which are suitable for their allergies or health issues and which are not.Users can store their health reports as well."
   },
   {
     name:"Craft Sale",
-    tech:"React JS , Tailwind CSS , Mongo DB , NodeJs , ExpressJs",
+    tech:"React JS , Tailwind CSS ",
     github:"https://github.com/Revanth-Mummidi/client",
     preview:"https://craftsale.vercel.app/",
     description:"It is an Ecommerce Website in which user can buy or sell the hand made crafts.I followed micro service architecture for the backend and in front end I used React Js along with Tailwind CSS."
