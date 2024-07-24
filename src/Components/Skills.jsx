@@ -8,11 +8,11 @@ function Skills() {
   const skills = [
     { name: "React JS", percentage: 85 },
     { name: "React Native", percentage: 90 },
-    { name: "Node JS", percentage: 75 },
-    { name: "Mongo DB", percentage: 75 },
-    { name: "Express JS", percentage: 75 },
+    { name: "Node JS", percentage: 85 },
+    { name: "Mongo DB", percentage: 85 },
+    { name: "Express JS", percentage: 85 },
     { name: "C++", percentage: 90 },
-    { name: "Python", percentage: 75},
+    { name: "Python", percentage: 80},
     { name: "DSA", percentage: 85 },
   ];
   const val = 66;

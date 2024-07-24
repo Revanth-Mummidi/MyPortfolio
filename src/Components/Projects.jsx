@@ -15,6 +15,7 @@ function Projects() {
     preview:"https://fit-foods.onrender.com/",
     description:"It is website which helps users to give personalized food choices according to their health issues and allergies.It helps users to identify the foods which are suitable for their allergies or health issues and which are not.Users can store their health reports as well."
   },
+  
   {
     name:"Craft Sale",
     tech:"React JS , Tailwind CSS ",
@@ -36,6 +37,13 @@ function Projects() {
     preview:"https://my-portfolio-git-master-revanthmummidis-projects.vercel.app/",
     description:"Welcome to my portfolio website, made using React JS and Tailwind CSS. This site showcases my projects and skills with a focus on dynamic animations and a responsive design that ensures a seamless experience across all devices. Also added themes with redux.",
   },
+  {
+    name:"Contacts",
+    tech:"React JS , Tailwind CSS , Mongo DB , NodeJs , ExpressJs",
+    github:"https://github.com/Revanth-Mummidi/Contacts_FrontEnd",
+    preview:"https://contacts-frontend-op23.onrender.com/",
+    description:"It is a simple contact storing app which has user authentication and integrated with the backend using node js and mongo db , in frontend I have used React js along with Tailwind css. In this projects you can see application of CRUD operations using Restful Apis "
+  }
 ]
 
   return (
