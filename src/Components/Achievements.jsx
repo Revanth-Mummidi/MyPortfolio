@@ -8,7 +8,7 @@ function Achievements() {
  
   const Color= GetColor(useSelector(state=>state.theme));
   const AchievementsData=[
-  "Ranked 1st in coding contest conducted in our college and won Mr.Coder Title in our college",
+  "Ranked 1st in coding contest conducted in my college and won Mr.Coder of VIIT Title",
   "Secured 2nd rank in Code Wars conducted by JNTUGV",
    "Qualified for Semi-Final Round in Turing Cup National Wide Coding contest",
    "Solved more than 1000+ problems from Leetcode , Codechef , GeeksForGeeks , CodeForces",
