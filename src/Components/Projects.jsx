@@ -15,7 +15,13 @@ function Projects() {
     preview:"https://fit-foods.onrender.com/",
     description:"It is website which helps users to give personalized food choices according to their health issues and allergies.It helps users to identify the foods which are suitable for their allergies or health issues and which are not.Users can store their health reports as well."
   },
-  
+  {
+    name:"Employee Details",
+    tech:"Angular JS , Tailwind CSS , Mongo DB , NodeJs , ExpressJs",
+    github:"https://github.com/Revanth-Mummidi/UserData",
+    preview:"https://employee-details-4i6u.onrender.com",
+    description:"This project contains employee details which can be added manually or upload bulk data through excel sheet upload and also can download the entire data converting from JSON to Excel sheet using XMLNS package. The project contains user authentication and routing guards which was made with Angular JS, Node Js,Mongo Db and Express JS"
+  },
   {
     name:"Craft Sale",
     tech:"React JS , Tailwind CSS ",
@@ -92,7 +98,7 @@ const Card = ({data}) => {
         >
         <div  className={`lg:w-[520px] flex ${Color.text_color} flex-row justify-center items-center xl:w-[500px] sm:w-[400px] w-[280px] lg:h-[400px]  shadow-2xl ${Color.shadow_color} flip-card-front aspect-video right-0 ${Color.border_color1} bg-gradient-to-l ${Color.gradient_colors1}  border  rounded-xl `}>
           {/* <FrontCard data={data} /> */}
-          <p className="text-[40px] lg:text-[60px] font-bold ">{data.name}</p>
+          <p className="text-[40px] lg:text-[60px] font-bold text-wrap w-[80%] text-center">{data.name}</p>
         </div>
         <div className={`lg:w-[520px] xl:w-[500px]  sm:w-[400px] w-[280px] shadow-2xl ${Color.shadow_color} blur-0 flip-card-back aspect-video lg:h-[400px] right-0 ${Color.border_color2} border ${Color.background_color} rounded-xl `}>
           <BackCard data={data} />

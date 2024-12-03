@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 
 function Skills() {
   const skills = [
+    { name: "Angular JS", percentage: 85 },
     { name: "React JS", percentage: 85 },
     { name: "React Native", percentage: 90 },
     { name: "Node JS", percentage: 85 },

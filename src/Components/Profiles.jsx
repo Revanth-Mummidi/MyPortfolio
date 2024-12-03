@@ -12,7 +12,7 @@ function Profiles() {
     {
       name:"Codechef",
       pic:"https://upload.wikimedia.org/wikipedia/en/thumb/7/7b/Codechef%28new%29_logo.svg/1200px-Codechef%28new%29_logo.svg.png",
-      description:(<p>(Highest Rated : 1764)</p>),
+      description:(<p>(Highest Rated : 1768)</p>),
       link:"https://www.codechef.com/users/revanth_2004",
     },
     {
@@ -24,7 +24,7 @@ function Profiles() {
     {
       name:"CodeForces",
       pic:"https://repository-images.githubusercontent.com/390296311/0f6c1240-462e-47ff-870d-e2d0ebb181f1",
-      description:(<p>(Highest Rated : 1298)</p>),
+      description:(<p>(Highest Rated : 1310)</p>),
       link:"https://codeforces.com/profile/revanth_2004",
     },
     {
