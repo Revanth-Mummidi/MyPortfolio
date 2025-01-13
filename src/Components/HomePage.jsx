@@ -78,7 +78,7 @@ function HomePage() {
                 <a href={"mailto:mummidirevanth@gmail.com"}>
                   <CustomButton content={"Hire Me"} />
                 </a>
-                <a href="https://drive.google.com/file/d/17-obb6rwRPOceS6u4l-mxHdiMY59pF1y/view?usp=sharing">
+                <a href="https://drive.google.com/file/d/1K-p-iAxQRzy2aVUyjlkaWGmMG0mC4glY/view?usp=sharing">
                   <CustomButton content={"Resume"} />
                 </a>
               </div>
