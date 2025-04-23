@@ -4,22 +4,39 @@ import HyggexLogo from "../Assets/hyggexworld_logo.jpeg"
 import HackerEarth from "../Assets/HE_identity.png";
 import React, { useState } from "react";
 import { Fade } from "react-reveal";
-import BgVideo from "../Assets/mixkit-night-sky-covered-with-stars-39768-hd-ready.mp4";
+import InncirclesArenaLogo from "../Assets/inncirclesarena_logo.jpeg";
 import GetColor from "../GetColor";
 import { useSelector } from "react-redux";
+import StarsBackground from "../common/StarsBackground";
 
 function Experience() {
   const Color= GetColor(useSelector(state=>state.theme));
  
   const ExperienceData=[
+    {
+      name:"Inncircles",
+      path:InncirclesArenaLogo,
+      role:"Product Developer Intern",
+      duration:"-",
+      location:"Remote",
+      started:"Aug 2024",
+      ended:"Working Currently",
+      description:( <p>Worked with MongoDB, Express, Node.js, and AngularJS for web development, implementing complex
+        aggregations and writing backend services for efficient data handling.<br/>
+        • Contributed to Android development using React Native and created shared components like Search
+        Component, Filter Pipe, and International Telephone Input.<br/>
+        • Developed dynamic UI components and replicated the figma design for Inncirclest AI marketing website in
+        NextJS. Implemented functionality to download data from the table through Excel files, ensuring
+        improved usability and smooth integration.</p>),
+   },
   {
      name:"Hyggex",
      path:HyggexLogo,
      role:"React JS Intern",
-     duration:"-",
+     duration:"3 months",
      location:"Remote",
      started:"Sep 2023",
-     ended:"Working Currently",
+     ended:"Jun 2024",
      description:( <p>In this internship I am currently working as a front end developer.<br/>I have completed Self Assessment Screens and Mock Test Screen and then integrated with <b> Api.</b> <br/> I also used <b>Redux</b> in the website. I made responsive designs using <b>Tailwind CSS</b></p>),
   },
   {
@@ -55,8 +72,11 @@ const VolunteerExperienceData=[
       <p className="text-[35px] my-10 md:text-[40px] font-bold  ">
         Experience
       </p>
-      <div className={`${Color.border_color1} ${Color.text_color} w-[90vw] ${Color.card_bg_color} ${Color.shadow_color} shadow-2xl border border-l-2 rounded-lg   items-center justify-center flex flex-col`}>
-     
+      <div className={`${Color.border_color1} ${Color.text_color} w-[90vw] ${Color.card_bg_color} ${Color.shadow_color} shadow-2xl relative overflow-hidden
+      border border-l-2 rounded-lg   items-center justify-center flex flex-col`}>
+      <div className="z-0 "> 
+          <StarsBackground/>
+      </div>
      
         <p className=" text-3xl mt-10 font-semibold">Intern Experience</p>
         <div className="sm:grid sm:grid-cols-1 md:grid-cols-1 xl:grid-cols-2  px-5 md:px-10 py-10 gap-x-12 gap-y-2 items-center justify-center">

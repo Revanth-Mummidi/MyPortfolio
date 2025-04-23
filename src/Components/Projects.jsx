@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Fade } from "react-reveal";
 import GetColor from "../GetColor";
 import { useSelector } from "react-redux";
+import StarsBackground from "../common/StarsBackground";
 
 function Projects() {
  
@@ -60,7 +61,11 @@ function Projects() {
       <p className="text-[35px] my-10 md:text-[40px] font-bold  ">
         Projects
       </p>
-      <div className={`${Color.border_color1} ${Color.card_bg_color} w-[90vw] ${Color.shadow_color} shadow-2xl border border-l-2 rounded-lg   items-center justify-center flex`}>
+      <div className={`${Color.border_color1} ${Color.card_bg_color} w-[90vw] ${Color.shadow_color} relative overflow-hidden
+      shadow-2xl border border-l-2 rounded-lg   items-center justify-center flex`}>
+      <div className="z-0 "> 
+          <StarsBackground/>
+      </div>
         <div className="sm:grid sm:grid-cols-1 md:grid-cols-1 xl:grid-cols-2 px-5 md:px-10 py-10 gap-x-12 gap-y-2 items-center justify-center">
         <Fade left duration={1500}>
           {

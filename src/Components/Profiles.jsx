@@ -2,6 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux';
 import { Fade } from 'react-reveal';
 import GetColor from '../GetColor';
+import StarsBackground from '../common/StarsBackground';
 
 
 function Profiles() {
@@ -56,7 +57,11 @@ function Profiles() {
         <p className={` ${Color.text_color1} text-[35px] my-10 md:text-[40px] font-bold  `}>
           Profiles
         </p>
-        <div className={`${Color.border_color1} w-[90vw] ${Color.card_bg_color} ${Color.shadow_color} shadow-2xl border border-l-2 rounded-lg  p-10 pt-5 items-center justify-center flex`}>
+        <div className={`${Color.border_color1} w-[90vw] ${Color.card_bg_color} ${Color.shadow_color} shadow-2xl border border-l-2 
+        rounded-lg  p-10 pt-5 items-center justify-center flex overflow-hidden relative `}>
+        <div className="z-0 "> 
+          <StarsBackground/>
+      </div>
           <Fade left duration={2500}>
           <div className="overflow-auto no-scrollbar flex flex-row py-10">
             {

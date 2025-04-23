@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
-import BgVideo from "../Assets/mixkit-night-sky-covered-with-stars-39768-hd-ready.mp4";
 import GetColor from "../GetColor";
 import { useSelector } from "react-redux";
+import StarsBackground from "../common/StarsBackground.jsx";
 
 function Navbar() {
   const [sideNav, setSideNav] = useState(false);
@@ -17,20 +17,12 @@ function Navbar() {
     { name: "Contact", path: "#contact" },
   ];
   return (
-    <div className={`fixed flex flex-row  shadow-2xl 
-    backdrop-blur-2xl
-   
+    <div className={`fixed flex flex-row  shadow-2xl backdrop-blur-2xl
     ${Color.shadow_light_color} ${Color.navbar_bg_color}
-      items-center py-4 px-[4vw] w-full  z-10 `}>
-      {/* <video
-        autoPlay
-        loop
-        muted
-        className="absolute top-0 left-0 w-[100%] h-[100%] object-fill -z-10"
-      >
-        <source src={BgVideo} type="video/mp4" />
-        
-      </video> */}
+      items-center py-4 px-[4vw] w-full  z-10 relative overflow-hidden`}>
+        <div className="z-10">
+          <StarsBackground/>
+        </div>
       <div className="self-start flex blur-0 ">
         <a href="#homepage" className={` md:text-2xl cursor-pointer text-lg  font-bold ${Color.hover_text_color}  `}>Revanth</a>
       </div>

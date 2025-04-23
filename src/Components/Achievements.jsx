@@ -3,6 +3,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { Fade } from "react-reveal";
 import GetColor from "../GetColor";
+import StarsBackground from "../common/StarsBackground";
 
 function Achievements() {
  
@@ -25,7 +26,10 @@ function Achievements() {
       <p className={` ${Color.text_color1} text-[35px] my-10 md:text-[40px] font-bold  `}>
         Achievements
       </p>
-      <div className={`${Color.border_color1} ${Color.card_bg_color} w-[90vw] ${Color.shadow_color} shadow-2xl border border-l-2 rounded-lg  p-10 items-center justify-center flex`}>
+      <div className={`${Color.border_color1} ${Color.card_bg_color} w-[90vw] ${Color.shadow_color} shadow-2xl border border-l-2 rounded-lg  relative overflow-hidden p-10 items-center justify-center flex`}>
+      <div className="z-0 "> 
+          <StarsBackground/>
+      </div>
         <div className="overflow-x-auto no-scrollbar">
       <Fade left duration={2000}>
          <ul className="list-disc gap-5">

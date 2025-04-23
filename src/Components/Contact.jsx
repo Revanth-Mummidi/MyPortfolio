@@ -3,12 +3,16 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import GetColor from '../GetColor';
 import { useSelector } from 'react-redux';
+import StarsBackground from '../common/StarsBackground';
 
 function Contact() {
    
   const Color= GetColor(useSelector(state=>state.theme));
   return (
-   <section id="contact" className={`w-[100vw] ${Color.navbar_bg_color} `}>
+   <section id="contact" className={`w-[100vw] relative overflow-hidden ${Color.navbar_bg_color} `}>
+       <div className="z-0 "> 
+          <StarsBackground/>
+      </div>
       <div className='flex flex-col items-center justify-start p-10'>
           <p className=' text-[30px] md:text-[40px] font-bold mb-10'>Contact Me</p>
           <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 font-semibold mx-10  gap-x-10 gap-y-10 my-10'>

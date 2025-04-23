@@ -3,6 +3,7 @@ import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
 import { Fade } from "react-reveal";
 import GetColor from "../GetColor";
 import { useSelector } from "react-redux";
+import StarsBackground from "../common/StarsBackground";
 
 function Skills() {
   const skills = [
@@ -28,7 +29,10 @@ function Skills() {
         Skills
       </p>
 
-      <div className={`${Color.border_color1} w-[90vw] ${Color.card_bg_color} ${Color.shadow_color} shadow-2xl border border-l-2 rounded-lg   items-center justify-center flex`}>
+      <div className={`${Color.border_color1} w-[90vw] ${Color.card_bg_color} ${Color.shadow_color} shadow-2xl border border-l-2 rounded-lg relative items-center justify-center flex overflow-hidden`}>
+      <div className="z-0 "> 
+          <StarsBackground/>
+      </div>
         {/* <LeftContent/> */}
         <div className={` ${Color.text_color} sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-20 py-10 gap-x-6 gap-y-2 items-center justify-center`}>
           <Fade bottom duration={1500}>
